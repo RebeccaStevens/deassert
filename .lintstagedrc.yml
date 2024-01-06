@@ -6,7 +6,6 @@
   - prettier --ignore-unknown --write
   - eslint --fix
   - cspell lint --no-progress --show-suggestions --show-context --no-must-find-files --dot
-  - tsc --noEmit
 
 "*.md":
   - prettier --ignore-unknown --write

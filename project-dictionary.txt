@@ -2,6 +2,9 @@ bar
 baz
 boop
 corge
+deassert
+deasserted
+estree
 foo
 fred
 garply
@@ -17,5 +20,6 @@ Rebecca
 sonarjs
 Stevens
 thud
+unassert
 waldo
 xyzzy
