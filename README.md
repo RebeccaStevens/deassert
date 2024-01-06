@@ -38,7 +38,7 @@ yarn add -D deassert
 bun add -D deassert
 ```
 
-### Thinking about Invariants
+## Thinking about Invariants
 
 Invariant checks in your code should be thought of as a way of saying:
 
