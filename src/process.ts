@@ -18,6 +18,7 @@ import {
   type ReadonlyScopeToIdentifiersToRemoveMap,
   type Scope,
 } from "./types";
+import { assertNeverAndLog } from "./utils";
 
 /**
  * Processes the provided AST to remove assert statements and assertion imports.
@@ -199,15 +200,9 @@ function removeNodeSmart(
     }
   }
 
-  assertNever(`Potentially unsafe node removal - ${scope.node.type}`);
-
-  /* v8 ignore next 6 */
-  // @ts-expect-error Unreachable code.
-  console.error(
-    `Potentially unsafe node removal - ${scope.node.type}. Please report this issue.`,
-  );
-  // @ts-expect-error Unreachable code.
-  return void removeNode(code, removedNodes, scope.node);
+  /* v8 ignore next 2 */
+  removeNode(code, removedNodes, scope.node);
+  assertNeverAndLog(`Potentially unsafe node removal - ${scope.node.type}.`);
 }
 
 /**

@@ -8,7 +8,7 @@ import {
   type Scope,
   type ScopeToIdentifiersToRemoveMap,
 } from "./types";
-import { isNotNull } from "./utils";
+import { assertNeverAndLog, isNotNull } from "./utils";
 
 /**
  * Walk the ast to gather all the infomation we need to process the code.
@@ -167,7 +167,10 @@ function createVisitor<State>(
         }
 
         default: {
-          assertNever(`Unexpected variable declarator "${element.type}"`); // Shouldn't happen... probably. Needs code example if it can.
+          // Shouldn't happen... probably. Needs code example if it can.
+          assertNeverAndLog(
+            `Unexpected variable declarator type "${element.type}"`,
+          );
         }
       }
     } while (stack.length > 0);
