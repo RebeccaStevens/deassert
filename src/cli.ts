@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+import { fail as assertNever } from "node:assert/strict";
 import fsp from "node:fs/promises";
 
 import deassert from "deassert";
@@ -14,7 +14,7 @@ if (process.argv.length > 3) {
   throw new Error("Too many arguments");
 }
 
-const file = process.argv[2] ?? assert.fail();
+const file = process.argv[2] ?? assertNever();
 
 const fileContent = await fsp.readFile(file, "utf8");
 const { code } = deassert(fileContent);

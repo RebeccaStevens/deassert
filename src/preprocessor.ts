@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+import { ok as assert, fail as assertNever } from "node:assert/strict";
 
 import type * as acorn from "acorn";
 import { ancestor as ancestorWalk, type AncestorVisitors } from "acorn-walk";
@@ -130,7 +130,7 @@ function createVisitor<State>(
 
     do {
       const element =
-        stack.pop() ?? assert.fail("stack is empty (or contains undefined).");
+        stack.pop() ?? assertNever("stack is empty (or contains undefined).");
 
       switch (element.type) {
         case "Identifier": {
@@ -167,7 +167,7 @@ function createVisitor<State>(
         }
 
         default: {
-          assert.fail(`Unexpected variable declarator "${element.type}"`); // Shouldn't happen... probably. Needs code example if it can.
+          assertNever(`Unexpected variable declarator "${element.type}"`); // Shouldn't happen... probably. Needs code example if it can.
         }
       }
     } while (stack.length > 0);
@@ -221,7 +221,7 @@ function registerNode(
   let m_i = 1;
 
   do {
-    m_scope = ensureScope(m_scope, ancestors[m_i] ?? assert.fail());
+    m_scope = ensureScope(m_scope, ancestors[m_i] ?? assertNever());
     m_i++;
   } while (m_i < ancestors.length);
 

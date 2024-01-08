@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+import { ok as assert, fail as assertNever } from "node:assert/strict";
 
 import type * as acorn from "acorn";
 import type MagicString from "magic-string";
@@ -41,7 +41,7 @@ export function process(
 
   do {
     const scope =
-      stack.pop() ?? assert.fail("stack is empty (or contains undefined).");
+      stack.pop() ?? assertNever("stack is empty (or contains undefined).");
 
     switch (scope.node.type) {
       case "CallExpression": {
@@ -199,7 +199,7 @@ function removeNodeSmart(
     }
   }
 
-  assert.fail(`Potentially unsafe node removal - ${scope.node.type}`);
+  assertNever(`Potentially unsafe node removal - ${scope.node.type}`);
 
   /* v8 ignore next 6 */
   // @ts-expect-error Unreachable code.
