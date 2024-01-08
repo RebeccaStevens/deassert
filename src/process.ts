@@ -19,6 +19,13 @@ import {
   type Scope,
 } from "./types";
 
+/**
+ * Processes the provided AST to remove assert statements and assertion imports.
+ *
+ * @param ast - The AST to process.
+ * @param code - The code corresponding to the AST, as a MagicString instance.
+ * @param modules - A list of assertion modules.
+ */
 export function process(
   ast: Readonly<acorn.Node>,
   code: MagicString,
@@ -64,6 +71,9 @@ export function process(
   } while (stack.length > 0);
 }
 
+/**
+ * Process a call expression in the code.
+ */
 function handleCallExpression(
   code: MagicString,
   removedNodes: Set<Readonly<acorn.Node>>,
@@ -103,6 +113,9 @@ function handleCallExpression(
   }
 }
 
+/**
+ * Process an import declaration in the code.
+ */
 function handleImportDeclaration(
   code: MagicString,
   removedNodes: Set<Readonly<acorn.Node>>,
@@ -120,6 +133,9 @@ function handleImportDeclaration(
   removeNodeSmart(code, removedNodes, scope);
 }
 
+/**
+ * Returns true if the node for the given scope has been removed.
+ */
 function isRemoved(
   removedNodes: ReadonlySet<Readonly<acorn.Node>>,
   scope: ReadonlyScope,
@@ -135,6 +151,11 @@ function isRemoved(
   return false;
 }
 
+/**
+ * Effectively remove the node for the given scope.
+ *
+ * It's parent maybe removed or it maybe replaced.
+ */
 function removeNodeSmart(
   code: MagicString,
   removedNodes: Set<Readonly<acorn.Node>>,
@@ -189,6 +210,15 @@ function removeNodeSmart(
   return void removeNode(code, removedNodes, scope.node);
 }
 
+/**
+ * Remove the given node.
+ *
+ * @param code - The code to remove the node from.
+ * @param removedNodes - A list of nodes that have been removed. The node will be added to this list.
+ * @param node - The node to remove.
+ * @param start - The start index within the code to remove.
+ * @param end - The end index within the code to remove.
+ */
 function removeNode(
   code: MagicString,
   removedNodes: Set<Readonly<acorn.Node>>,
@@ -200,6 +230,16 @@ function removeNode(
   code.remove(start ?? node.start, end ?? node.end);
 }
 
+/**
+ * Replace a node with the given replacement.
+ *
+ * @param code - The code to remove the node from.
+ * @param removedNodes - A list of nodes that have been removed. The node will be added to this list.
+ * @param node - The node to remove.
+ * @param replacement - What the node should be replaced with.
+ * @param start - The start index within the code to remove.
+ * @param end - The end index within the code to remove.
+ */
 function replaceNode(
   code: MagicString,
   removedNodes: Set<Readonly<acorn.Node>>,
@@ -212,17 +252,35 @@ function replaceNode(
   code.update(start ?? node.start, end ?? node.end, replacement);
 }
 
+/**
+ * Remove a node and replace it with one of it children.
+ *
+ * Effectively, unwrap the child.
+ *
+ * @param code - The code to remove the node from.
+ * @param removedNodes - A list of nodes that have been removed. The node will be added to this list.
+ * @param node - The node to remove.
+ * @param child - The child node to replace the node with.
+ */
 function replaceNodeWithChild(
   code: MagicString,
   removedNodes: Set<Readonly<acorn.Node>>,
   node: Readonly<acorn.Node>,
   child: Readonly<acorn.Node>,
 ) {
+  assert(
+    node.start <= child.start && node.end >= child.end,
+    "Child node is not a child of the node.",
+  );
+
   removedNodes.add(node);
   code.remove(node.start, child.start);
   code.remove(child.end, node.end);
 }
 
+/**
+ * Checks if an identifier is flaged for removal.
+ */
 function shouldRemoveIdentifier(
   scopeToIdentifiersToRemoveMap: ReadonlyScopeToIdentifiersToRemoveMap,
   scope: ReadonlyScope,
@@ -231,6 +289,7 @@ function shouldRemoveIdentifier(
   if (scopeToIdentifiersToRemoveMap.get(scope)?.includes(name) === true) {
     return true;
   }
+  // If identifier wasn't declared in this scope, check the parent scope.
   if (scope.identifiers?.includes(name) !== true && scope.parent !== null) {
     return shouldRemoveIdentifier(
       scopeToIdentifiersToRemoveMap,

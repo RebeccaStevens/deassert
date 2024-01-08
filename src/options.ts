@@ -13,6 +13,9 @@ export type Options = {
   readonly acornOptions?: Readonly<acorn.Options> | undefined;
 };
 
+/**
+ * The {@link Options} once defaults have been applied.
+ */
 export type FullOptions = {
   readonly modules: ReadonlyArray<string>;
   readonly sourceMap: boolean | SourceMapOptions;
@@ -20,6 +23,9 @@ export type FullOptions = {
   readonly acornOptions?: Readonly<acorn.Options>;
 };
 
+/**
+ * Get the default options that are passed to {@link deassert}.
+ */
 export function defaultOptions() {
   return {
     modules: ["assert", "assert/strict", "node:assert", "node:assert/strict"],
@@ -31,6 +37,9 @@ export function defaultOptions() {
   } satisfies FullOptions;
 }
 
+/**
+ * Get the default options for the source map settings when {@link Options.sourceMap} is `true`.
+ */
 export function defaultSourceMapOptions() {
   return { hires: true } satisfies SourceMapOptions;
 }

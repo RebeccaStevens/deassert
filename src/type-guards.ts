@@ -1,3 +1,5 @@
+/* eslint-disable jsdoc/require-jsdoc -- Trivial */
+
 import type * as acorn from "acorn";
 
 export function isIdentifier(

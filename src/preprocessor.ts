@@ -10,6 +10,9 @@ import {
 } from "./types";
 import { isNotNull } from "./utils";
 
+/**
+ * Walk the ast to gather all the infomation we need to process the code.
+ */
 export function preprocess(
   ast: Readonly<acorn.Node>,
   modules: ReadonlyArray<string>,
@@ -36,6 +39,9 @@ export function preprocess(
   return [rootScope, nodesToRemove, scopeToIdentifiersToRemoveMap];
 }
 
+/**
+ * Create the visitor that will walk the ast.
+ */
 function createVisitor<State>(
   rootScope: Scope,
   nodesToRemove: NodesToRemove,
@@ -168,6 +174,9 @@ function createVisitor<State>(
   }
 }
 
+/**
+ * Adds identifiers to the given scope.
+ */
 function addIdentifiers(
   scope: Scope,
   identifiers: string[],
@@ -180,6 +189,9 @@ function addIdentifiers(
   scope.identifiers.push(...identifiers);
 }
 
+/**
+ * Gets the identifiers to remove for the given scope, creating it if needed.
+ */
 function ensureIdentifiersToRemove(
   scopeToIdentifiersToRemoveMap: ScopeToIdentifiersToRemoveMap,
   scope: Scope,
@@ -194,6 +206,11 @@ function ensureIdentifiersToRemove(
   return newToRemove;
 }
 
+/**
+ * Registers a node by ensuring that its scope exists.
+ *
+ * @returns The scope this node is in.
+ */
 function registerNode(
   rootScope: Scope,
   ancestors: ReadonlyArray<Readonly<acorn.Node>>,
@@ -213,6 +230,11 @@ function registerNode(
   return m_scope.parent;
 }
 
+/**
+ * Ensures that a scope exists for the given node, creating it if needed.
+ *
+ * @returns The scope for the node.
+ */
 function ensureScope(parentScope: Scope, node: Readonly<acorn.Node>) {
   if (parentScope.children === undefined) {
     parentScope.children = new Map();
@@ -228,6 +250,9 @@ function ensureScope(parentScope: Scope, node: Readonly<acorn.Node>) {
   return newScope;
 }
 
+/**
+ * Creates a new scope for the given AST node.
+ */
 function createScope(
   node: Readonly<acorn.Node>,
   parentScope: Scope | null,

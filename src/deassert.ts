@@ -12,9 +12,9 @@ import { process } from "./process";
 /**
  * Remove assertions form the given code, returning the changes.
  *
- * @param code
- * @param options
- * @returns The modified code and the source map for the changes.
+ * @param code - The code to remove assertions form.
+ * @param options - The options to use.
+ * @returns The code with assertion removed and the source map for the changes (if source map options are configured).
  */
 export function deassert(
   code: string,
@@ -27,8 +27,8 @@ export function deassert(
 /**
  * Remove assertions form the given code by mutating the given Magic String.
  *
- * @param code
- * @param options
+ * @param code - The code to remove assertions form.
+ * @param options - The options to use.
  */
 export function deassert(code: MagicString, options?: Options): void;
 
