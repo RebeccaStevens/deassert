@@ -85,6 +85,7 @@ function handleCallExpression(
     return;
   }
 
+  // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check -- Only check types we care about.
   switch (scope.node.callee.type) {
     case "Identifier": {
       if (
