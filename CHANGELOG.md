@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+## [1.0.2](https://github.com/RebeccaStevens/deassert/compare/v1.0.1...v1.0.2) (2024-1-14)
+
+
+### Bug Fixes
+
+* entry point for older module resolutions ([1ae38bc](https://github.com/RebeccaStevens/deassert/commit/1ae38bc0860b464f13ce7afecd5cda46b273f513))
+
 ## [1.0.1](https://github.com/RebeccaStevens/deassert/compare/v1.0.0...v1.0.1) (2024-1-8)
 
 
