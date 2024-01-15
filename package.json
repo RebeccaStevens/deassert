@@ -113,7 +113,7 @@
     "rollup-plugin-auto-external": "2.0.0",
     "rollup-plugin-shebang-bin": "0.0.6",
     "rollup-plugin-ts": "3.4.5",
-    "semantic-release": "22.0.12",
+    "semantic-release": "23.0.0",
     "typescript": "5.3.3",
     "vite-tsconfig-paths": "4.2.3",
     "vitest": "1.2.0"
