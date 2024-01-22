@@ -22,6 +22,13 @@ development without slowing down production.
 
 [Any donations would be much appreciated](./DONATIONS.md). 😄
 
+### Enterprise Users
+
+`deassert` is available as part of the Tidelift Subscription.
+
+Tidelift is working with the maintainers of `deassert` and a growing network of open source maintainers to ensure your open source software supply chain meets enterprise standards now and into the future.
+[Learn more.](https://tidelift.com/subscription/pkg/npm-deassert?utm_source=npm-deassert&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
 ## Installation
 
 ```sh
