@@ -102,7 +102,7 @@
     "eslint-plugin-sonarjs": "0.23.0",
     "eslint-plugin-unicorn": "50.0.1",
     "eslint-plugin-vitest": "0.3.20",
-    "husky": "8.0.3",
+    "husky": "9.0.7",
     "knip": "4.2.1",
     "lint-staged": "15.2.0",
     "markdownlint-cli": "0.39.0",
