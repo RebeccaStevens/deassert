@@ -68,8 +68,8 @@
     "magic-string": "^0.30.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.2",
+    "@commitlint/cli": "19.0.3",
+    "@commitlint/config-conventional": "19.0.3",
     "@cspell/dict-cryptocurrencies": "5.0.0",
     "@rebeccastevens/eslint-config": "2.0.10",
     "@semantic-release/changelog": "6.0.3",
