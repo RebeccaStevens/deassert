@@ -32,7 +32,7 @@ importers:
         version: 5.0.0
       '@rebeccastevens/eslint-config':
         specifier: 2.0.10
-        version: 2.0.10(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3))(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.56.0))(eslint-plugin-eslint-comments@3.2.0(eslint@8.56.0))(eslint-plugin-functional@6.0.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0))(eslint-plugin-jsdoc@48.0.4(eslint@8.56.0))(eslint-plugin-markdown@3.0.1(eslint@8.56.0))(eslint-plugin-n@17.2.1(eslint@8.56.0))(eslint-plugin-optimize-regex@1.2.1)(eslint-plugin-promise@6.1.1(eslint@8.56.0))(eslint-plugin-sonarjs@0.23.0(eslint@8.56.0))(eslint-plugin-unicorn@52.0.0(eslint@8.56.0))(eslint@8.56.0)
+        version: 2.0.10(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3))(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.56.0))(eslint-plugin-eslint-comments@3.2.0(eslint@8.56.0))(eslint-plugin-functional@6.0.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0))(eslint-plugin-jsdoc@48.0.4(eslint@8.56.0))(eslint-plugin-markdown@3.0.1(eslint@8.56.0))(eslint-plugin-n@17.2.1(eslint@8.56.0))(eslint-plugin-optimize-regex@1.2.1)(eslint-plugin-promise@6.1.1(eslint@8.56.0))(eslint-plugin-sonarjs@1.0.4(eslint@8.56.0))(eslint-plugin-unicorn@52.0.0(eslint@8.56.0))(eslint@8.56.0)
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@23.0.8(typescript@5.3.3))
@@ -115,8 +115,8 @@ importers:
         specifier: 6.1.1
         version: 6.1.1(eslint@8.56.0)
       eslint-plugin-sonarjs:
-        specifier: 0.23.0
-        version: 0.23.0(eslint@8.56.0)
+        specifier: 1.0.4
+        version: 1.0.4(eslint@8.56.0)
       eslint-plugin-unicorn:
         specifier: 52.0.0
         version: 52.0.0(eslint@8.56.0)
@@ -626,6 +626,7 @@ packages:
   '@humanwhocodes/config-array@0.11.13':
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -633,6 +634,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.1':
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
+    deprecated: Use @eslint/object-schema instead
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1950,11 +1952,11 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
 
-  eslint-plugin-sonarjs@0.23.0:
-    resolution: {integrity: sha512-z44T3PBf9W7qQ/aR+NmofOTyg6HLhSEZOPD4zhStqBpLoMp8GYhFksuUBnCxbnf1nfISpKBVkQhiBLFI/F4Wlg==}
-    engines: {node: '>=14'}
+  eslint-plugin-sonarjs@1.0.4:
+    resolution: {integrity: sha512-jF0eGCUsq/HzMub4ExAyD8x1oEgjOyB9XVytYGyWgSFvdiJQJp6IuP7RmtauCf06o6N/kZErh+zW4b10y1WZ+Q==}
+    engines: {node: '>=16'}
     peerDependencies:
-      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+      eslint: ^8.0.0 || ^9.0.0
 
   eslint-plugin-unicorn@52.0.0:
     resolution: {integrity: sha512-1Yzm7/m+0R4djH0tjDjfVei/ju2w3AzUGjG6q8JnuNIL5xIwsflyCooW5sfBvQp2pMYQFSWWCFONsjCax1EHng==}
@@ -2260,6 +2262,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -2450,6 +2453,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -3620,6 +3624,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@5.0.5:
@@ -5104,7 +5109,7 @@ snapshots:
       - '@pnpm/logger'
       - domexception
 
-  '@rebeccastevens/eslint-config@2.0.10(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3))(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.56.0))(eslint-plugin-eslint-comments@3.2.0(eslint@8.56.0))(eslint-plugin-functional@6.0.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0))(eslint-plugin-jsdoc@48.0.4(eslint@8.56.0))(eslint-plugin-markdown@3.0.1(eslint@8.56.0))(eslint-plugin-n@17.2.1(eslint@8.56.0))(eslint-plugin-optimize-regex@1.2.1)(eslint-plugin-promise@6.1.1(eslint@8.56.0))(eslint-plugin-sonarjs@0.23.0(eslint@8.56.0))(eslint-plugin-unicorn@52.0.0(eslint@8.56.0))(eslint@8.56.0)':
+  '@rebeccastevens/eslint-config@2.0.10(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3))(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1)(eslint@8.56.0))(eslint-plugin-eslint-comments@3.2.0(eslint@8.56.0))(eslint-plugin-functional@6.0.0(eslint@8.56.0)(typescript@5.3.3))(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0))(eslint-plugin-jsdoc@48.0.4(eslint@8.56.0))(eslint-plugin-markdown@3.0.1(eslint@8.56.0))(eslint-plugin-n@17.2.1(eslint@8.56.0))(eslint-plugin-optimize-regex@1.2.1)(eslint-plugin-promise@6.1.1(eslint@8.56.0))(eslint-plugin-sonarjs@1.0.4(eslint@8.56.0))(eslint-plugin-unicorn@52.0.0(eslint@8.56.0))(eslint@8.56.0)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.7.0(@typescript-eslint/parser@7.7.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/parser': 7.7.0(eslint@8.56.0)(typescript@5.3.3)
@@ -5119,7 +5124,7 @@ snapshots:
       eslint-plugin-n: 17.2.1(eslint@8.56.0)
       eslint-plugin-optimize-regex: 1.2.1
       eslint-plugin-promise: 6.1.1(eslint@8.56.0)
-      eslint-plugin-sonarjs: 0.23.0(eslint@8.56.0)
+      eslint-plugin-sonarjs: 1.0.4(eslint@8.56.0)
       eslint-plugin-unicorn: 52.0.0(eslint@8.56.0)
 
   '@rollup/pluginutils@5.1.0(rollup@4.9.6)':
@@ -6438,7 +6443,7 @@ snapshots:
     dependencies:
       eslint: 8.56.0
 
-  eslint-plugin-sonarjs@0.23.0(eslint@8.56.0):
+  eslint-plugin-sonarjs@1.0.4(eslint@8.56.0):
     dependencies:
       eslint: 8.56.0
 
