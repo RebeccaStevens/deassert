@@ -1,8 +1,16 @@
 {
-  "$schema": "https://unpkg.com/knip@latest/schema.json",
+  "$schema": "node_modules/knip/schema-jsonc.json",
   "entry": ["src/index.ts!", "src/cli.ts!", "tests/**/*.test.ts"],
-  "project": ["src/**/*.ts!", "tests/**/*.ts"],
+  "project": ["src/**/*.ts!", "tests/**/*.{js,ts}"],
+  "ignore": ["dist/**", "bin/**"],
   "ignoreDependencies": [
-    "rollup", // workaround
+    // Unknown reason for issue.
+    "@vitest/coverage-v8",
+
+    // Lint staged
+    "tsc-files",
+
+    // Eslint
+    "@eslint/compat",
   ],
 }

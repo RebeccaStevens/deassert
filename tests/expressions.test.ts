@@ -14,18 +14,18 @@ describe.each([undefined, "chai"])("modules", (library) => {
       "removes assertion call expressions from logical expressions",
       (test) => {
         const fixture = dedent`
-        import assert from "${library ?? "node:assert/strict"}";
+          import assert from "${library ?? "node:assert/strict"}";
 
-        const foo = 5;
-        const bar = foo ${test};
-        console.log(bar);
-      `;
+          const foo = 5;
+          const bar = foo ${test};
+          console.log(bar);
+        `;
 
         const expected = dedent`
-        const foo = 5;
-        const bar = foo;
-        console.log(bar);
-      `;
+          const foo = 5;
+          const bar = foo;
+          console.log(bar);
+        `;
 
         const code = new MagicString(fixture);
 

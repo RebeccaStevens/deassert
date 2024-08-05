@@ -9,3 +9,6 @@ overrides:
   - files: "*.md"
     options:
       embeddedLanguageFormatting: "off"
+  - files: ".nvmrc"
+    options:
+      parser: "yaml"

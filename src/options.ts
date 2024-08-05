@@ -1,27 +1,29 @@
 import type * as acorn from "acorn";
-import { type SourceMapOptions } from "magic-string";
+import type { SourceMapOptions } from "magic-string";
 
-import { deassert } from "./deassert";
+/**
+ * @typedef {import("./deassert").deassert} deassert
+ */
 
 /**
  * The options that can be given to the {@link deassert} function.
  */
-export type Options = {
-  readonly modules?: ReadonlyArray<string> | undefined;
-  readonly sourceMap?: boolean | SourceMapOptions | undefined;
-  readonly ast?: Readonly<acorn.Node> | undefined;
-  readonly acornOptions?: Readonly<acorn.Options> | undefined;
-};
+export type Options = Readonly<{
+  modules?: ReadonlyArray<string> | undefined;
+  sourceMap?: boolean | SourceMapOptions | undefined;
+  ast?: Readonly<acorn.Node> | undefined;
+  acornOptions?: Readonly<acorn.Options> | undefined;
+}>;
 
 /**
  * The {@link Options} once defaults have been applied.
  */
-export type FullOptions = {
-  readonly modules: ReadonlyArray<string>;
-  readonly sourceMap: boolean | SourceMapOptions;
-  readonly ast?: Readonly<acorn.Node>;
-  readonly acornOptions?: Readonly<acorn.Options>;
-};
+export type FullOptions = Readonly<{
+  modules: ReadonlyArray<string>;
+  sourceMap: boolean | SourceMapOptions;
+  ast?: Readonly<acorn.Node>;
+  acornOptions?: Readonly<acorn.Options>;
+}>;
 
 /**
  * Get the default options that are passed to {@link deassert}.

@@ -2,8 +2,8 @@ import * as acorn from "acorn";
 import MagicString, { type SourceMap } from "magic-string";
 
 import {
-  type Options,
   type FullOptions,
+  type Options,
   defaultOptions,
   defaultSourceMapOptions,
 } from "./options";

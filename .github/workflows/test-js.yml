@@ -11,5 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
-      - run: pnpm run test
+      - run: pnpm run test:js-run
       - uses: codecov/codecov-action@v4

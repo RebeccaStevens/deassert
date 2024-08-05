@@ -36,22 +36,22 @@ describe("call statements", () => {
   describe("uses an empty statement when a statement can't be removed", () => {
     it("if statements without brackets", () => {
       const fixture = dedent`
-      import assert from "node:assert/strict";
+        import assert from "node:assert/strict";
 
-      const foo = 1
-      if (foo > 0)
-        assert(foo < 100)
-      else
-        assert(foo > -100)
-    `;
+        const foo = 1
+        if (foo > 0)
+          assert(foo < 100)
+        else
+          assert(foo > -100)
+      `;
 
       const expected = dedent`
-      const foo = 1
-      if (foo > 0)
-        ;
-      else
-        ;
-    `;
+        const foo = 1
+        if (foo > 0)
+          ;
+        else
+          ;
+      `;
 
       const code = new MagicString(fixture);
 
@@ -61,18 +61,18 @@ describe("call statements", () => {
 
     it("label statements", () => {
       const fixture = dedent`
-      import assert from "node:assert/strict";
+        import assert from "node:assert/strict";
 
-      const foo = 1
-      label:
-        assert(foo < 100)
-    `;
+        const foo = 1
+        label:
+          assert(foo < 100)
+      `;
 
       const expected = dedent`
-      const foo = 1
-      label:
-        ;
-    `;
+        const foo = 1
+        label:
+          ;
+      `;
 
       const code = new MagicString(fixture);
 

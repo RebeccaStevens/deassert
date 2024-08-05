@@ -41,12 +41,12 @@ export type Scope<T extends acorn.Node = acorn.Node> = {
 /**
  * A readonly version of {@link Scope}.
  */
-export type ReadonlyScope<T extends acorn.Node = acorn.Node> = {
-  readonly node: Readonly<T>;
-  readonly parent: ReadonlyScope | null;
-  readonly children?: ReadonlyScopeMap;
-  readonly identifiers?: ReadonlyArray<string>;
-};
+export type ReadonlyScope<T extends acorn.Node = acorn.Node> = Readonly<{
+  node: Readonly<T>;
+  parent: ReadonlyScope | null;
+  children?: ReadonlyScopeMap;
+  identifiers?: ReadonlyArray<string>;
+}>;
 
 /**
  * A map from scopes to identifier names to remove from that scope.

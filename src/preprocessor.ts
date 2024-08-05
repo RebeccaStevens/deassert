@@ -1,12 +1,12 @@
 import { ok as assert, fail as assertNever } from "node:assert/strict";
 
 import type * as acorn from "acorn";
-import { ancestor as ancestorWalk, type AncestorVisitors } from "acorn-walk";
+import { type AncestorVisitors, ancestor as ancestorWalk } from "acorn-walk";
 
-import {
-  type NodesToRemove,
-  type Scope,
-  type ScopeToIdentifiersToRemoveMap,
+import type {
+  NodesToRemove,
+  Scope,
+  ScopeToIdentifiersToRemoveMap,
 } from "./types";
 import { assertNeverAndLog, isNotNull } from "./utils";
 
@@ -22,9 +22,8 @@ export function preprocess(
     new Map();
   const nodesToRemove: NodesToRemove = [];
 
-  const isAssertionModuleName = (node: Readonly<acorn.Literal>) => {
-    return typeof node.value === "string" && modules.includes(node.value);
-  };
+  const isAssertionModuleName = (node: Readonly<acorn.Literal>) =>
+    typeof node.value === "string" && modules.includes(node.value);
 
   ancestorWalk(
     ast,

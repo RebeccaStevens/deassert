@@ -17,15 +17,19 @@ concurrency:
 jobs:
   lint_js:
     uses: ./.github/workflows/lint-js.yml
+  lint_knip_dev:
+    uses: ./.github/workflows/lint-knip-dev.yml
   lint_knip_prod:
     uses: ./.github/workflows/lint-knip-prod.yml
   lint_markdown:
     uses: ./.github/workflows/lint-markdown.yml
+  lint_packages:
+    uses: ./.github/workflows/lint-packages.yml
   lint_spelling:
     uses: ./.github/workflows/lint-spelling.yml
-  lint_prettier:
-    uses: ./.github/workflows/lint-prettier.yml
-  test:
+  lint_yaml:
+    uses: ./.github/workflows/lint-yaml.yml
+  test_js:
     uses: ./.github/workflows/test-js.yml
   # FIXME: Type check fails in CI - disable until fixed.
   # type_check:
@@ -36,9 +40,10 @@ jobs:
       - lint_js
       - lint_knip_prod
       - lint_markdown
+      - lint_packages
       - lint_spelling
-      - lint_prettier
-      - test
+      - lint_yaml
+      - test_js
       # - type_check
     runs-on: ubuntu-latest
     steps:

@@ -1,9 +1,9 @@
-import { createFilter, type FilterPattern } from "@rollup/pluginutils";
+import { type FilterPattern, createFilter } from "@rollup/pluginutils";
 import type * as acorn from "acorn";
-import { type Plugin } from "rollup";
+import type { Plugin } from "rollup";
 
 import { deassert } from "../deassert";
-import { type Options as DeassertOptions } from "../options";
+import type { Options as DeassertOptions } from "../options";
 
 export type Options = {
   include?: FilterPattern;

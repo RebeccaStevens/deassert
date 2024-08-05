@@ -24,9 +24,10 @@ development without slowing down production.
 
 ### Enterprise Users
 
-`deassert` is available as part of the Tidelift Subscription.
+`deassert` is available as part of the [Tidelift Subscription](https://tidelift.com/funding/github/npm/deassert).
 
-Tidelift is working with the maintainers of `deassert` and a growing network of open source maintainers to ensure your open source software supply chain meets enterprise standards now and into the future.
+Tidelift is working with the maintainers of `deassert` and a growing network of open source maintainers
+to ensure your open source software supply chain meets enterprise standards now and into the future.
 [Learn more.](https://tidelift.com/subscription/pkg/npm-deassert?utm_source=npm-deassert&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## Installation
@@ -79,7 +80,6 @@ export default {
         // ...
       ],
 };
-
 ```
 
 ### CLI
@@ -109,7 +109,7 @@ These modules will be what is stripped out.
 ###### default
 
 ```js
-["assert", "assert/strict", "node:assert", "node:assert/strict"]
+["assert", "assert/strict", "node:assert", "node:assert/strict"];
 ```
 
 ##### `sourceMap`
@@ -163,16 +163,28 @@ Given the following code that uses assertion calls to enforce known invariants,
 some of which may be expensive (line 11):
 
 ```js
-import { ok as assert, fail as assertNever, AssertionError } from "node:assert/strict";
+import {
+  AssertionError,
+  ok as assert,
+  fail as assertNever,
+} from "node:assert/strict";
 
-const stack = [{ type: "foo", children: [ /* ... */] }];
+const stack = [
+  {
+    type: "foo",
+    children: [
+      /* ... */
+    ],
+  },
+];
 const result = [];
 
 try {
   do {
-    const element = stack.pop() ?? assertNever("stack is empty (or contains undefined).");
+    const element =
+      stack.pop() ?? assertNever("stack is empty (or contains undefined).");
 
-    switch(element.type) {
+    switch (element.type) {
       case "foo": {
         assert(children.every(isExpectedType), "unexpected child type.");
         stack.push(...children);
@@ -180,7 +192,10 @@ try {
       }
 
       case "bar": {
-        assert(element.children.length === 0, "bar elements should not have children.");
+        assert(
+          element.children.length === 0,
+          "bar elements should not have children.",
+        );
         result.push(element.data);
         break;
       }
@@ -196,8 +211,7 @@ try {
   } while (stack.length > 0);
 
   console.log((assert(result.length > 0), result));
-}
-catch (error) {
+} catch (error) {
   assert(error instanceof Error, "Unexpected Error.");
   assert(!(error instanceof AssertionError), error);
 
@@ -208,14 +222,21 @@ catch (error) {
 This library will transform the code into essentially the following:
 
 ```js
-const stack = [{ type: "foo", children: [ /* ... */] }];
+const stack = [
+  {
+    type: "foo",
+    children: [
+      /* ... */
+    ],
+  },
+];
 const result = [];
 
 try {
   do {
     const element = stack.pop();
 
-    switch(element.type) {
+    switch (element.type) {
       case "foo": {
         stack.push(...children);
         break;
@@ -233,8 +254,7 @@ try {
   } while (stack.length > 0);
 
   console.log(result);
-}
-catch (error) {
+} catch (error) {
   console.error(error);
 }
 ```

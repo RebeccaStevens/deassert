@@ -12,11 +12,11 @@ import {
   isLogicalExpression,
   isSequenceExpression,
 } from "./type-guards";
-import {
-  type ReadonlyNodesToRemove,
-  type ReadonlyScope,
-  type ReadonlyScopeToIdentifiersToRemoveMap,
-  type Scope,
+import type {
+  ReadonlyNodesToRemove,
+  ReadonlyScope,
+  ReadonlyScopeToIdentifiersToRemoveMap,
+  Scope,
 } from "./types";
 import { assertNeverAndLog } from "./utils";
 
@@ -85,7 +85,7 @@ function handleCallExpression(
     return;
   }
 
-  // eslint-disable-next-line @typescript-eslint/switch-exhaustiveness-check -- Only check types we care about.
+  // eslint-disable-next-line ts/switch-exhaustiveness-check -- Only check types we care about.
   switch (scope.node.callee.type) {
     case "Identifier": {
       if (

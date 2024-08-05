@@ -1,10 +1,31 @@
-import { type RollupOptions } from "rollup";
-import rollupPluginAutoExternal from "rollup-plugin-auto-external";
+import rollupPluginReplace from "@rollup/plugin-replace";
+import type { RollupOptions } from "rollup";
 import rollupPluginShebang from "rollup-plugin-shebang-bin";
 import rollupPluginTs from "rollup-plugin-ts";
 
-import pkg from "./package.json" assert { type: "json" };
-import { rollupPlugin as rollupDeassert } from "./src";
+import pkg from "./package.json" with { type: "json" };
+import { rollupPlugin as rollupPluginDeassert } from "./src";
+
+type PackageJSON = typeof pkg & {
+  dependencies?: Record<string, string>;
+  peerDependencies?: Record<string, string>;
+};
+
+const externalDependencies = [
+  ...Object.keys((pkg as PackageJSON).dependencies),
+  ...Object.keys((pkg as PackageJSON).peerDependencies ?? {}),
+];
+
+const external: RollupOptions["external"] = (source) => {
+  if (
+    source === "deassert" ||
+    source.startsWith("node:") ||
+    externalDependencies.some((dep) => source.startsWith(dep))
+  ) {
+    return true;
+  }
+  return undefined;
+};
 
 const treeshake = {
   annotations: true,
@@ -30,16 +51,23 @@ const library = {
   ],
 
   plugins: [
-    rollupPluginAutoExternal(),
     rollupPluginTs({
       transpileOnly: true,
     }),
-    rollupDeassert({
+    rollupPluginReplace({
+      values: {
+        "import.meta.vitest": "undefined",
+      },
+      preventAssignment: true,
+    }),
+    rollupPluginDeassert({
       include: ["**/*.ts"],
     }),
   ],
 
   treeshake,
+
+  external,
 } satisfies RollupOptions;
 
 const bin = {
@@ -52,11 +80,16 @@ const bin = {
   },
 
   plugins: [
-    rollupPluginAutoExternal(),
     rollupPluginTs({
       transpileOnly: true,
     }),
-    rollupDeassert({
+    rollupPluginReplace({
+      values: {
+        "import.meta.vitest": "undefined",
+      },
+      preventAssignment: true,
+    }),
+    rollupPluginDeassert({
       include: ["**/*.ts"],
     }),
     rollupPluginShebang({
@@ -66,7 +99,7 @@ const bin = {
 
   treeshake,
 
-  external: ["deassert"],
+  external,
 } satisfies RollupOptions;
 
 export default [library, bin];
