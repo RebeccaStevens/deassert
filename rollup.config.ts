@@ -4,7 +4,7 @@ import rollupPluginShebang from "rollup-plugin-shebang-bin";
 import rollupPluginTs from "rollup-plugin-ts";
 
 import pkg from "./package.json" with { type: "json" };
-import { rollupPlugin as rollupPluginDeassert } from "./src";
+import rollupPluginDeassert from "./src/rollup/local";
 
 type PackageJSON = typeof pkg & {
   dependencies?: Record<string, string>;
@@ -104,6 +104,38 @@ const bin = {
   external,
 } satisfies RollupOptions;
 
+const rollupPlugin = {
+  input: "src/rollup/plugin.ts",
+
+  output: [
+    {
+      file: pkg.exports["./rollup-plugin"].default,
+      format: "esm",
+      sourcemap: false,
+    },
+  ],
+
+  plugins: [
+    rollupPluginTs({
+      transpileOnly: true,
+      tsconfig: "./tsconfig.build.json",
+    }),
+    rollupPluginReplace({
+      values: {
+        "import.meta.vitest": "undefined",
+      },
+      preventAssignment: true,
+    }),
+    rollupPluginDeassert({
+      include: ["**/*.ts"],
+    }),
+  ],
+
+  treeshake,
+
+  external,
+} satisfies RollupOptions;
+
 const webpackLoader = {
   input: "src/webpack/loader.cts",
 
@@ -136,4 +168,4 @@ const webpackLoader = {
   external,
 } satisfies RollupOptions;
 
-export default [library, bin, webpackLoader];
+export default [library, bin, rollupPlugin, webpackLoader];
