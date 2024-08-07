@@ -5,7 +5,10 @@
   "ignore": ["dist/**", "bin/**"],
   "ignoreDependencies": [
     // Unknown reason for issue.
+    "@types/webpack",
     "@vitest/coverage-v8",
+    "rollup",
+    "webpack",
 
     // Lint staged
     "tsc-files",

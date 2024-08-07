@@ -28,12 +28,18 @@
   },
   "type": "module",
   "exports": {
-    "types": {
-      "import": "./dist/index.d.mts",
-      "require": "./dist/index.d.cts"
+    ".": {
+      "types": {
+        "import": "./dist/index.d.mts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
+    "./webpack-loader": {
+      "types": "./dist/loader.d.cts",
+      "default": "./dist/loader.cjs"
+    }
   },
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
@@ -67,7 +73,7 @@
     "typecheck": "tsc -p tsconfig.build.json --noEmit"
   },
   "dependencies": {
-    "@rollup/pluginutils": "5.1.0",
+    "@rollup/pluginutils": "^5.1.0",
     "acorn": "^8.11.3",
     "acorn-walk": "^8.3.1",
     "magic-string": "^0.30.5"
@@ -87,6 +93,7 @@
     "@semantic-release/release-notes-generator": "14.0.1",
     "@stylistic/eslint-plugin": "2.6.1",
     "@types/node": "20.14.14",
+    "@types/webpack": "5.28.5",
     "@typescript-eslint/eslint-plugin": "8.0.0",
     "@typescript-eslint/parser": "8.0.0",
     "@vitest/coverage-v8": "2.0.5",
@@ -131,7 +138,20 @@
     "tsc-files": "1.1.4",
     "typescript": "5.5.4",
     "vite-tsconfig-paths": "4.3.2",
-    "vitest": "2.0.5"
+    "vitest": "2.0.5",
+    "webpack": "5.93.0"
+  },
+  "peerDependencies": {
+    "rollup": "*",
+    "webpack": "*"
+  },
+  "peerDependenciesMeta": {
+    "rollup": {
+      "optional": true
+    },
+    "webpack": {
+      "optional": true
+    }
   },
   "packageManager": "pnpm@9.6.0"
 }

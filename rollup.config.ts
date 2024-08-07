@@ -13,7 +13,7 @@ type PackageJSON = typeof pkg & {
 
 const externalDependencies = [
   ...Object.keys((pkg as PackageJSON).dependencies),
-  ...Object.keys((pkg as PackageJSON).peerDependencies ?? {}),
+  ...Object.keys((pkg as PackageJSON).peerDependencies),
 ];
 
 const external: RollupOptions["external"] = (source) => {
@@ -39,12 +39,12 @@ const library = {
 
   output: [
     {
-      file: pkg.exports.import,
+      file: pkg.exports["."].import,
       format: "esm",
       sourcemap: false,
     },
     {
-      file: pkg.exports.require,
+      file: pkg.exports["."].require,
       format: "cjs",
       sourcemap: false,
     },
@@ -53,6 +53,7 @@ const library = {
   plugins: [
     rollupPluginTs({
       transpileOnly: true,
+      tsconfig: "./tsconfig.build.json",
     }),
     rollupPluginReplace({
       values: {
@@ -82,6 +83,7 @@ const bin = {
   plugins: [
     rollupPluginTs({
       transpileOnly: true,
+      tsconfig: "./tsconfig.build.json",
     }),
     rollupPluginReplace({
       values: {
@@ -102,4 +104,36 @@ const bin = {
   external,
 } satisfies RollupOptions;
 
-export default [library, bin];
+const webpackLoader = {
+  input: "src/webpack/loader.cts",
+
+  output: [
+    {
+      file: pkg.exports["./webpack-loader"].default,
+      format: "cjs",
+      sourcemap: false,
+    },
+  ],
+
+  plugins: [
+    rollupPluginTs({
+      transpileOnly: true,
+      tsconfig: "./src/webpack/tsconfig.json",
+    }),
+    rollupPluginReplace({
+      values: {
+        "import.meta.vitest": "undefined",
+      },
+      preventAssignment: true,
+    }),
+    rollupPluginDeassert({
+      include: ["**/*.ts"],
+    }),
+  ],
+
+  treeshake,
+
+  external,
+} satisfies RollupOptions;
+
+export default [library, bin, webpackLoader];
