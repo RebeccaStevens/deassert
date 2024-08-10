@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+## [1.1.1](https://github.com/RebeccaStevens/deassert/compare/v1.1.0...v1.1.1) (2024-08-10)
+
+
+### Bug Fixes
+
+* webpack loader default options ([ffc707a](https://github.com/RebeccaStevens/deassert/commit/ffc707a447326bb2767ff331a23c86b1eeffc90b))
+
 # [1.1.0](https://github.com/RebeccaStevens/deassert/compare/v1.0.2...v1.1.0) (2024-08-07)
 
 
