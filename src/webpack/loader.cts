@@ -13,14 +13,18 @@ module.exports = function deassertLoader(
   this: LoaderContext<Options>,
   source: string,
 ) {
-  const { acornOptions, ...options } = this.getOptions();
-
-  const ast = acorn.parse(
-    source,
-    acornOptions ?? {
+  const {
+    acornOptions = {
+      sourceType: "module",
       ecmaVersion: "latest",
     },
-  );
+    ...options
+  } = {
+    modules: ["assert", "assert/strict", "node:assert", "node:assert/strict"],
+    ...this.getOptions(),
+  };
+
+  const ast = acorn.parse(source, acornOptions);
   const { code } = deassert.default(source, {
     ...options,
     ast,
