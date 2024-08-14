@@ -20,6 +20,12 @@ export function isSequenceExpression(
   return node?.type === "SequenceExpression";
 }
 
+export function isConditionalExpression(
+  node: acorn.Node | undefined | null,
+): node is acorn.ConditionalExpression {
+  return node?.type === "ConditionalExpression";
+}
+
 export function isExpression(
   node: acorn.Node | undefined | null,
 ): node is acorn.Expression {

@@ -54,5 +54,26 @@ describe.each([undefined, "chai"])("modules", (library) => {
       deassert(code, { modules });
       compareCode(code.toString(), expected);
     });
+
+    it("removes assertion call expressions from conditional expressions", () => {
+      const fixture = dedent`
+        import assert from "${library ?? "node:assert/strict"}";
+
+        const foo = 5;
+        const bar = foo > 0 ? foo : assert.fail();
+        console.log(bar);
+      `;
+
+      const expected = dedent`
+        const foo = 5;
+        const bar = (foo > 0) || true ? foo : undefined;
+        console.log(bar);
+      `;
+
+      const code = new MagicString(fixture);
+
+      deassert(code, { modules });
+      compareCode(code.toString(), expected);
+    });
   });
 });

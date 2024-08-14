@@ -5,6 +5,7 @@ import type MagicString from "magic-string";
 
 import { preprocess } from "./preprocessor";
 import {
+  isConditionalExpression,
   isExpression,
   isExpressionStatement,
   isIdentifier,
@@ -199,6 +200,20 @@ function removeNodeSmart(
         nextExpression.start,
       );
     }
+  }
+
+  if (isConditionalExpression(scope.parent?.node)) {
+    code.appendLeft(scope.parent.node.test.start, "(");
+    code.appendRight(scope.parent.node.test.end, ") || true");
+
+    return void replaceNode(
+      code,
+      removedNodes,
+      scope.parent.node.consequent === scope.node
+        ? scope.parent.node.consequent
+        : scope.parent.node.alternate,
+      "undefined",
+    );
   }
 
   /* v8 ignore next 2 */
