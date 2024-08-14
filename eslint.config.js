@@ -5,7 +5,14 @@ export default rsEslint(
   {
     projectRoot: import.meta.dirname,
     mode: "library",
-    typescript: true,
+    typescript: {
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: ["*.js"],
+          defaultProject: "./tsconfig.json",
+        },
+      },
+    },
     formatters: true,
     functional: false,
     jsonc: true,
@@ -14,7 +21,12 @@ export default rsEslint(
     yaml: true,
   },
   {
-    files: ["src/cli.ts"],
+    rules: {
+      "ts/ban-ts-comment": "off",
+    },
+  },
+  {
+    files: ["packages/cli/src/**/*"],
     rules: {
       "no-console": "off",
     },

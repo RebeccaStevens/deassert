@@ -1,7 +1,10 @@
 node_modules/
 
-/bin/
-/coverage/
-/dist/
+bin/
+coverage/
+dist/
+
+tsconfig.tsbuildinfo
+rollup.config-*.mjs
 
 *.log

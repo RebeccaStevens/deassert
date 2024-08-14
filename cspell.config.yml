@@ -25,9 +25,6 @@ dictionaries:
   - typescript
   - project-dictionary
 
-import:
-  - "@cspell/dict-cryptocurrencies/cspell-ext.json"
-
 ignorePaths:
   - .git
   - .gitattributes
@@ -48,6 +45,7 @@ ignorePaths:
   - patches
   - pnpm-lock.yaml
   - project-dictionary.txt
+  - tsconfig.tsbuildinfo
 
 ignoreRegExpList:
   - /\b[a-f0-9]{6}\b/ui # ignore hex color codes

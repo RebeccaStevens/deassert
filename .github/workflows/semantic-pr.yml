@@ -27,6 +27,14 @@ jobs:
             build
             ci
             chore
+          scopes: |
+            cli
+            core
+            rollup-plugin
+            webpack-loader
+            deps
+            dev-deps
+            peer-deps
           requireScope: false
           subjectPattern: ^(?![A-Z]).+$ # Don't start with an uppercase character.
           subjectPatternError: |

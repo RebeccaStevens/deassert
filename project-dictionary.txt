@@ -10,6 +10,7 @@ fred
 garply
 grault
 knip
+lcov
 litecoin
 monero
 noreply

@@ -1,123 +1,69 @@
 {
-  "name": "deassert",
+  "name": "deassert-mono",
   "version": "0.0.0-development",
-  "description": "Allows for programming with assertions/invariant-based programming during development without slowing down production.",
-  "keywords": ["assert", "deassert", "invariant", "unassert"],
-  "homepage": "https://github.com/RebeccaStevens/deassert#readme",
-  "bugs": {
-    "url": "https://github.com/RebeccaStevens/deassert/issues"
-  },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RebeccaStevens/deassert"
   },
-  "funding": [
-    {
-      "type": "ko-fi",
-      "url": "https://ko-fi.com/rebeccastevens"
-    },
-    {
-      "type": "tidelift",
-      "url": "https://tidelift.com/funding/github/npm/deassert"
-    }
-  ],
   "license": "BSD-3-Clause",
   "author": {
     "name": "Rebecca Stevens",
     "email": "rebecca.stevens@outlook.co.nz"
   },
   "type": "module",
-  "exports": {
-    ".": {
-      "types": {
-        "import": "./dist/index.d.mts",
-        "require": "./dist/index.d.cts"
-      },
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    },
-    "./webpack-loader": {
-      "types": "./dist/loader.d.cts",
-      "default": "./dist/loader.cjs"
-    }
-  },
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
-  "bin": "./bin/deassert.mjs",
-  "files": ["bin/", "dist/", "package.json", "LICENSE", "README.md"],
   "scripts": {
-    "build": "pnpm run build:node",
-    "build:node": "rimraf bin dist && rollup -c rollup.config.ts --configPlugin rollup-plugin-ts",
-    "cz": "git-cz",
-    "lint": "eslint && pnpm run lint:md && pnpm run lint:spelling && pnpm run lint:knip && pnpm run lint:packages",
-    "lint-fix": "eslint --fix && pnpm run lint:md-fix && pnpm run lint:packages-fix",
+    "build": "pnpm --stream -r build",
+    "lint": "eslint \".*\" && markdownlint-cli2 && pnpm --stream -r lint && pnpm run lint:knip && pnpm run lint:spelling && pnpm run lint:yaml && pnpm run lint:packages",
+    "lint-fix": "eslint \".*\" --fix && markdownlint-cli2 --fix && pnpm --stream -r lint-fix && pnpm run lint:packages-fix",
     "lint:js": "eslint \"**/*.?([cm])[jt]s?(x)\"",
     "lint:js-fix": "eslint \"**/*.?([cm])[jt]s?(x)\" --fix",
     "lint:knip": "pnpm run lint:knip:development && pnpm run lint:knip:production",
     "lint:knip:development": "knip --exclude exports,nsExports,types,nsTypes",
     "lint:knip:production": "knip --production --strict --exclude exports,nsExports,types,nsTypes",
-    "lint:md": "markdownlint-cli2",
-    "lint:md-fix": "markdownlint-cli2 --fix",
-    "lint:md-full": "pnpm run lint:md && eslint \"**/*.md\"",
-    "lint:md-full-fix": "pnpm run lint:md-fix && eslint \"**/*.md\" --fix",
+    "lint:md": "markdownlint-cli2 && eslint \"**/*.md\"",
+    "lint:md-fix": "markdownlint-cli2 --fix && eslint \"**/*.md\" --fix",
     "lint:packages": "pnpm dedupe --check",
     "lint:packages-fix": "pnpm dedupe",
     "lint:spelling": "cspell lint --no-progress --show-suggestions --show-context --dot \"**\" \".github/**/*\"",
     "lint:yaml": "eslint \"**/*.y?(a)ml\"",
     "lint:yaml-fix": "eslint \"**/*.y?(a)ml\" --fix",
     "prepare": "husky",
-    "release": "semantic-release",
-    "test": "pnpm run test:js",
-    "test:js": "vitest --coverage",
-    "test:js-run": "vitest run --coverage",
-    "typecheck": "tsc -p tsconfig.build.json --noEmit"
-  },
-  "dependencies": {
-    "@rollup/pluginutils": "^5.1.0",
-    "acorn": "^8.11.3",
-    "acorn-walk": "^8.3.1",
-    "magic-string": "^0.30.5"
+    "release": "pnpm -r --workspace-concurrency=1 release",
+    "test": "pnpm --stream -r test",
+    "typecheck": "pnpm --stream -r typecheck"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.3.0",
-    "@commitlint/config-conventional": "19.2.2",
-    "@cspell/dict-cryptocurrencies": "5.0.0",
     "@eslint/compat": "1.1.1",
-    "@rebeccastevens/eslint-config": "3.0.0",
-    "@rollup/plugin-replace": "5.0.7",
+    "@rebeccastevens/eslint-config": "3.2.2",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "10.1.3",
+    "@semantic-release/github": "10.1.4",
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "14.0.1",
-    "@stylistic/eslint-plugin": "2.6.1",
-    "@types/node": "20.14.14",
-    "@types/webpack": "5.28.5",
-    "@typescript-eslint/eslint-plugin": "8.0.0",
-    "@typescript-eslint/parser": "8.0.0",
-    "@vitest/coverage-v8": "2.0.5",
-    "commitizen": "4.3.0",
-    "cspell": "8.13.1",
-    "cz-conventional-changelog": "3.3.0",
-    "dedent": "1.5.3",
-    "eslint": "9.8.0",
+    "@stylistic/eslint-plugin": "2.6.2",
+    "@types/node": "22.3.0",
+    "@typescript-eslint/eslint-plugin": "8.1.0",
+    "@typescript-eslint/parser": "8.1.0",
+    "cspell": "8.13.3",
+    "eslint": "9.9.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-flat-config-utils": "0.3.0",
+    "eslint-formatting-reporter": "0.0.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-merge-processors": "0.1.0",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-format": "0.1.2",
-    "eslint-plugin-functional": "7.0.0",
+    "eslint-plugin-functional": "7.0.1",
     "eslint-plugin-import-x": "3.1.0",
-    "eslint-plugin-jsdoc": "48.11.0",
+    "eslint-plugin-jsdoc": "50.2.1",
     "eslint-plugin-jsonc": "2.16.0",
     "eslint-plugin-markdown": "5.1.0",
     "eslint-plugin-n": "17.10.2",
     "eslint-plugin-no-only-tests": "3.1.0",
     "eslint-plugin-optimize-regex": "1.2.1",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-promise": "7.0.0",
+    "eslint-plugin-promise": "7.1.0",
     "eslint-plugin-regexp": "2.6.0",
     "eslint-plugin-sonarjs": "1.0.4",
     "eslint-plugin-unicorn": "55.0.0",
@@ -125,33 +71,15 @@
     "eslint-plugin-yml": "1.14.0",
     "husky": "9.1.4",
     "jsonc-eslint-parser": "2.4.0",
-    "knip": "5.27.0",
-    "lint-staged": "15.2.8",
+    "knip": "5.27.2",
+    "lint-staged": "15.2.9",
     "markdownlint-cli2": "0.13.0",
     "prettier": "3.3.3",
-    "prettier-plugin-packagejson": "2.5.1",
-    "rimraf": "6.0.1",
-    "rollup": "4.20.0",
-    "rollup-plugin-shebang-bin": "0.0.6",
-    "rollup-plugin-ts": "3.4.5",
     "semantic-release": "24.0.0",
+    "semantic-release-monorepo": "8.0.2",
+    "sort-package-json": "2.10.0",
     "tsc-files": "1.1.4",
-    "typescript": "5.5.4",
-    "vite-tsconfig-paths": "4.3.2",
-    "vitest": "2.0.5",
-    "webpack": "5.93.0"
+    "yaml-eslint-parser": "1.2.3"
   },
-  "peerDependencies": {
-    "rollup": "*",
-    "webpack": "*"
-  },
-  "peerDependenciesMeta": {
-    "rollup": {
-      "optional": true
-    },
-    "webpack": {
-      "optional": true
-    }
-  },
-  "packageManager": "pnpm@9.6.0"
+  "packageManager": "pnpm@9.7.0"
 }

@@ -1,14 +1,27 @@
 {
   "$schema": "node_modules/knip/schema-jsonc.json",
-  "entry": ["src/index.ts!", "src/cli.ts!", "tests/**/*.test.ts"],
-  "project": ["src/**/*.ts!", "tests/**/*.{js,ts}"],
-  "ignore": ["dist/**", "bin/**"],
+  "workspaces": {
+    "packages/*": {
+      "entry": ["src/index.ts!", "src/cli.ts!", "tests/**/*.test.ts"],
+      "project": ["src/**/*.ts!", "tests/**/*.{js,ts}"],
+      "ignoreDependencies": [
+        // semantic-release
+        "semantic-release-monorepo",
+        "@semantic-release/changelog",
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/git",
+        "@semantic-release/github",
+        "@semantic-release/npm",
+        "@semantic-release/release-notes-generator",
+
+        // Unknown reason for issue.
+        "@vitest/coverage-v8",
+      ],
+    },
+  },
   "ignoreDependencies": [
-    // Unknown reason for issue.
-    "@types/webpack",
-    "@vitest/coverage-v8",
-    "rollup",
-    "webpack",
+    // semantic-release
+    "semantic-release-monorepo",
 
     // Lint staged
     "tsc-files",

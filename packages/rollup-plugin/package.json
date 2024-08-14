@@ -1,0 +1,86 @@
+{
+  "name": "rollup-plugin-deassert",
+  "version": "0.0.0-development",
+  "description": "rollup plugin for deassert",
+  "keywords": [
+    "assert",
+    "deassert",
+    "invariant",
+    "unassert",
+    "rollup",
+    "rollup-plugin"
+  ],
+  "homepage": "https://github.com/RebeccaStevens/deassert/tree/main/packages/rollup-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/RebeccaStevens/deassert/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RebeccaStevens/deassert"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/rebeccastevens"
+    },
+    {
+      "type": "tidelift",
+      "url": "https://tidelift.com/funding/github/npm/deassert"
+    }
+  ],
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Rebecca Stevens",
+    "email": "rebecca.stevens@outlook.co.nz"
+  },
+  "type": "module",
+  "exports": {
+    "types": {
+      "import": "./dist/index.d.mts",
+      "require": "./dist/index.d.cts"
+    },
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "pnpm run build:node",
+    "build:node": "rimraf bin dist && rollup -c rollup.config.ts --configPlugin rollup-plugin-ts",
+    "lint": "eslint \"**/*\"",
+    "lint-fix": "eslint \"**/*\" --fix",
+    "lint:js": "eslint \"**/*.?([cm])[jt]s?(x)\"",
+    "lint:js-fix": "eslint \"**/*.?([cm])[jt]s?(x)\" --fix",
+    "lint:yaml": "eslint \"**/*.y?(a)ml\"",
+    "lint:yaml-fix": "eslint \"**/*.y?(a)ml\" --fix",
+    "release": "semantic-release",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^5.1.0",
+    "deassert": "workspace:*"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "13.0.0",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "10.1.4",
+    "@semantic-release/npm": "12.0.1",
+    "@semantic-release/release-notes-generator": "14.0.1",
+    "rimraf": "6.0.1",
+    "rollup": "4.20.0",
+    "rollup-plugin-ts": "3.4.5",
+    "semantic-release": "24.0.0",
+    "semantic-release-monorepo": "8.0.2",
+    "tsx": "4.17.0",
+    "typescript": "5.5.4"
+  },
+  "peerDependencies": {
+    "acorn": "^8.12.1",
+    "rollup": "^4.20.0"
+  },
+  "packageManager": "pnpm@9.7.0"
+}

@@ -31,9 +31,8 @@ jobs:
     uses: ./.github/workflows/lint-yaml.yml
   test_js:
     uses: ./.github/workflows/test-js.yml
-  # FIXME: Type check fails in CI - disable until fixed.
-  # type_check:
-  #   uses: ./.github/workflows/type-check.yml
+  typecheck:
+    uses: ./.github/workflows/typecheck.yml
 
   release:
     needs:
@@ -44,7 +43,7 @@ jobs:
       - lint_spelling
       - lint_yaml
       - test_js
-      # - type_check
+      - typecheck
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +56,7 @@ jobs:
         run: pnpm run build
 
       - name: Release
-        run: pnpm run release
+        run: pnpm -r --workspace-concurrency=1 exec -- pnpm run release
         env:
           GITHUB_TOKEN: ${{ github.token }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

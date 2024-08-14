@@ -1,8 +1,7 @@
 <div align="center">
 
-# Deassert
+# Deassert Mono Repo
 
-[![npm version](https://img.shields.io/npm/v/deassert.svg)](https://www.npmjs.com/package/deassert)
 [![CI](https://github.com/RebeccaStevens/deassert/actions/workflows/release.yml/badge.svg)](https://github.com/RebeccaStevens/deassert/actions/workflows/release.yml)
 [![Coverage Status](https://codecov.io/gh/RebeccaStevens/deassert/branch/main/graph/badge.svg?token=MVpR1oAbIT)](https://codecov.io/gh/RebeccaStevens/deassert)\
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
@@ -59,115 +58,20 @@ Do not try to recover from Assertion Errors. If your error is recoverable, use a
 You probably don't want to use this library in your development builds.
 It's designed to be used in your production builds.
 
-### Rollup Plugin
+### Packages
 
-```js
-// rollup.config.js
-import { rollupPlugin as deassert } from "deassert";
-
-const isProduction = process.env.NODE_ENV === "production";
-
-export default {
-  // ...
-  plugins: isProduction
-    ? [
-        // ...
-        deassert({
-          include: ["**/*.ts"], // If using TypeScript, be sure to include this config option. Otherwise remove it.
-        }),
-      ]
-    : [
-        // ...
-      ],
-};
-```
-
-### CLI
-
-```sh
-npx deassert myfile.js > myfile.deasserted.js
-```
-
-Note: Options cannot be provided via the CLI.
-
-### API
-
-```js
-import deassert from "deassert";
-
-const result = deassert(code, options);
-console.log(result.code);
-```
-
-#### Options
-
-##### `modules`
-
-An array of modules to be considered assert modules.
-These modules will be what is stripped out.
-
-###### default
-
-```js
-["assert", "assert/strict", "node:assert", "node:assert/strict"];
-```
-
-##### `sourceMap`
-
-Determines if a source map should be generated.
-
-[MagicString](https://www.npmjs.com/package/magic-string) source map options can be passed in.
-
-###### default
-
-```jsonc
-false
-```
-
-If `true` is passed, then these options will be used:
-
-```jsonc
-{
-  "hires": true,
-}
-```
-
-##### `ast`
-
-The AST of the code that is passed in.
-
-Providing this is optional, but if you have the AST already then we can use that instead of generating our own.
-
-###### default
-
-```jsonc
-undefined
-```
-
-##### `acornOptions`
-
-The options provided to [Acorn](https://www.npmjs.com/package/acorn) to parse the input code. These are not used if an AST is provided.
-
-###### default
-
-```jsonc
-{
-  "sourceType": "module",
-  "ecmaVersion": "latest",
-}
-```
+- [JS API](./packages/core/) [![npm version](https://img.shields.io/npm/v/deassert.svg)](https://www.npmjs.com/package/deassert)
+- [CLI](./packages/cli/) [![npm version](https://img.shields.io/npm/v/deassert-cli.svg)](https://www.npmjs.com/package/deassert-cli)
+- [Rollup Plugin](./packages/rollup-plugin/) [![npm version](https://img.shields.io/npm/v/rollup-plugin-deassert.svg)](https://www.npmjs.com/package/rollup-plugin-deassert)
+- [Webpack Loader](./packages/webpack-loader/) [![npm version](https://img.shields.io/npm/v/deassert-loader.svg)](https://www.npmjs.com/package/deassert-loader)
 
 ## Example
 
 Given the following code that uses assertion calls to enforce known invariants,
-some of which may be expensive (line 11):
+some of which may be expensive (line 25):
 
 ```js
-import {
-  AssertionError,
-  ok as assert,
-  fail as assertNever,
-} from "node:assert/strict";
+import { AssertionError, ok as assert, fail as assertNever } from "node:assert/strict";
 
 const stack = [
   {
@@ -181,8 +85,7 @@ const result = [];
 
 try {
   do {
-    const element =
-      stack.pop() ?? assertNever("stack is empty (or contains undefined).");
+    const element = stack.pop() ?? assertNever("stack is empty (or contains undefined).");
 
     switch (element.type) {
       case "foo": {
@@ -192,10 +95,7 @@ try {
       }
 
       case "bar": {
-        assert(
-          element.children.length === 0,
-          "bar elements should not have children.",
-        );
+        assert(element.children.length === 0, "bar elements should not have children.");
         result.push(element.data);
         break;
       }

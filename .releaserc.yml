@@ -1,8 +1,6 @@
+extends: "semantic-release-monorepo"
 branches:
   - main
-  - name: next
-    channel: next
-    prerelease: next
 plugins:
   - - "@semantic-release/commit-analyzer"
     - preset: angular
@@ -26,15 +24,6 @@ plugins:
         - type: build
           scope: peer-deps
           release: patch
-        - type: build
-          scope: release-patch
-          release: patch
-        - type: build
-          scope: release-minor
-          release: minor
-        - type: build
-          scope: release-major
-          release: major
   - - "@semantic-release/release-notes-generator"
     - preset: angular
       parserOpts:

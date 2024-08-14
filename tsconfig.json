@@ -1,10 +1,21 @@
 {
-  "extends": "./tsconfig.build.json",
-  "compilerOptions": {
-    "allowJs": true,
-    "noEmit": true,
-    "rootDir": ".",
-    "isolatedDeclarations": false
-  },
-  "include": [".", ".*", "**/*", "**/.*"]
+  "extends": "./tsconfig.base.json",
+  "references": [
+    {
+      "name": "deassert",
+      "path": "./packages/core"
+    },
+    {
+      "name": "deassert-cli",
+      "path": "./packages/cli"
+    },
+    {
+      "name": "rollup-plugin-deassert",
+      "path": "./packages/rollup-plugin"
+    },
+    {
+      "name": "deassert-loader",
+      "path": "./packages/webpack-loader"
+    }
+  ]
 }

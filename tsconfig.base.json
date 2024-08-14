@@ -29,6 +29,15 @@
     "strict": true,
     "target": "ESNext",
     "useUnknownInCatchVariables": true,
-    "types": ["vitest/importMeta"]
-  }
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "deassert": ["./packages/core/src/index.ts"],
+      "deassert-cli": ["./packages/cli/src/index.ts"],
+      "rollup-plugin-deassert": ["./packages/rollup-plugin/src/index.ts"],
+      "deassert-loader": ["./packages/webpack-loader/src/index.cts"]
+    }
+  },
+  "include": [".", "**/*.ts"],
+  "exclude": ["**/dist", "**/bin"]
 }
