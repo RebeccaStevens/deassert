@@ -149,15 +149,17 @@ function removeNodeSmart(code: MagicString, removedNodes: Set<Readonly<acorn.Nod
   }
 
   if (isConditionalExpression(scope.parent?.node)) {
-    code.appendLeft(scope.parent.node.test.start, "(");
-    code.appendRight(scope.parent.node.test.end, ") || true");
+    if (scope.parent.node.consequent === scope.node) {
+      code.appendLeft(scope.parent.node.test.start, "((");
+      code.appendRight(scope.parent.node.test.end, ") && false)");
 
-    return void replaceNode(
-      code,
-      removedNodes,
-      scope.parent.node.consequent === scope.node ? scope.parent.node.consequent : scope.parent.node.alternate,
-      "undefined",
-    );
+      return void replaceNode(code, removedNodes, scope.parent.node.consequent, "undefined");
+    }
+
+    code.appendLeft(scope.parent.node.test.start, "((");
+    code.appendRight(scope.parent.node.test.end, ") || true)");
+
+    return void replaceNode(code, removedNodes, scope.parent.node.alternate, "undefined");
   }
 
   /* v8 ignore next 2 */

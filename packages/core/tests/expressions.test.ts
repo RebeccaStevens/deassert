@@ -61,13 +61,17 @@ describe.each([undefined, "chai"])("modules", (library) => {
 
         const foo = 5;
         const bar = foo > 0 ? foo : assert.fail();
-        console.log(bar);
+        const baz = foo < 0 ? assert.fail() : foo;
+        const qux = foo < 0 ? assert.fail() : assert.fail();
+        console.log(bar, baz);
       `;
 
       const expected = dedent`
         const foo = 5;
-        const bar = (foo > 0) || true ? foo : undefined;
-        console.log(bar);
+        const bar = ((foo > 0) || true) ? foo : undefined;
+        const baz = ((foo < 0) && false) ? undefined : foo;
+        const qux = ((((foo < 0) || true)) && false) ? undefined : undefined;
+        console.log(bar, baz);
       `;
 
       const code = new MagicString(fixture);
