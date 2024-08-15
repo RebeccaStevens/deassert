@@ -14,8 +14,8 @@
   "type": "module",
   "scripts": {
     "build": "pnpm --stream -r build",
-    "lint": "eslint \".*\" && markdownlint-cli2 && pnpm --stream -r lint && pnpm run lint:knip && pnpm run lint:spelling && pnpm run lint:yaml && pnpm run lint:packages",
-    "lint-fix": "eslint \".*\" --fix && markdownlint-cli2 --fix && pnpm --stream -r lint-fix && pnpm run lint:packages-fix",
+    "lint": "eslint && markdownlint-cli2 && pnpm run lint:knip && pnpm run lint:spelling && pnpm run lint:yaml && pnpm run lint:packages",
+    "lint-fix": "eslint --fix && markdownlint-cli2 --fix && pnpm run lint:packages-fix",
     "lint:js": "eslint \"**/*.?([cm])[jt]s?(x)\"",
     "lint:js-fix": "eslint \"**/*.?([cm])[jt]s?(x)\" --fix",
     "lint:knip": "pnpm run lint:knip:development && pnpm run lint:knip:production",
