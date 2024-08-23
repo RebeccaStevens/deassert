@@ -48,7 +48,7 @@ builds.
 
 ```js
 // rollup.config.js
-import { rollupPlugin as deassert } from "deassert";
+import deassert from "rollup-plugin-deassert";
 
 const isProduction = process.env.NODE_ENV === "production";
 
