@@ -1,7 +1,10 @@
-import acorn from "acorn";
+import * as acorn from "acorn";
 import deassert, { type Options as DeassertOptions } from "deassert";
 import type { LoaderContext, LoaderDefinitionFunction } from "webpack";
 
+/**
+ * The options that can be given to the {@link deassertLoader}.
+ */
 export type Options = Omit<DeassertOptions, "sourceMap" | "ast">;
 
 export default (function deassertLoader(this: LoaderContext<Options>, source: string) {

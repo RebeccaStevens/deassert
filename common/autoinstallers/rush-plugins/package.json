@@ -1,0 +1,9 @@
+{
+  "name": "rush-plugins",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "rush-lint-staged-plugin": "0.2.1",
+    "rush-sort-package-json": "0.1.1"
+  }
+}

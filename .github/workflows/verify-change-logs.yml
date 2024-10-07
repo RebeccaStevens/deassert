@@ -1,0 +1,21 @@
+name: Verify Change Logs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+env:
+  RUSH_ALLOW_WARNINGS_IN_SUCCESSFUL_BUILD: 1
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/prepare
+
+      - run: node common/scripts/install-run-rush.js change --verify

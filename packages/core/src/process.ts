@@ -107,13 +107,13 @@ function handleImportDeclaration(
  * Returns true if the node for the given scope has been removed.
  */
 function isRemoved(removedNodes: ReadonlySet<Readonly<acorn.Node>>, scope: ReadonlyScope) {
-  let m_s: ReadonlyScope | null = scope;
+  let mut_scope: ReadonlyScope | null = scope;
   do {
-    if (removedNodes.has(m_s.node)) {
+    if (removedNodes.has(mut_scope.node)) {
       return true;
     }
-    m_s = m_s.parent;
-  } while (m_s !== null);
+    mut_scope = mut_scope.parent;
+  } while (mut_scope !== null);
 
   return false;
 }

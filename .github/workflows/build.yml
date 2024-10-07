@@ -1,14 +1,20 @@
-name: Lint Packages
+name: Build
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
   workflow_call:
 
+env:
+  RUSH_ALLOW_WARNINGS_IN_SUCCESSFUL_BUILD: 1
+
 jobs:
-  lint_packages:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
-      - run: pnpm run lint:packages
+      - run: node common/scripts/install-run-rush.js build --verbose

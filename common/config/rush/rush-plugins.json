@@ -1,0 +1,18 @@
+/**
+ * This configuration file manages Rush's plugin feature.
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush-plugins.schema.json",
+  "plugins": [
+    {
+      "packageName": "rush-lint-staged-plugin",
+      "pluginName": "rush-lint-staged-plugin",
+      "autoinstallerName": "rush-plugins"
+    },
+    {
+      "packageName": "rush-sort-package-json",
+      "pluginName": "rush-sort-package-json",
+      "autoinstallerName": "rush-plugins"
+    }
+  ]
+}

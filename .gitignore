@@ -1,10 +1,37 @@
-node_modules/
+# Logs
+*.log
+.pnpm-debug.log*
 
+# Distribution files
 bin/
-coverage/
 dist/
 
-tsconfig.tsbuildinfo
-rollup.config-*.mjs
+# Coverage directory used by tools like istanbul
+coverage/
 
-*.log
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+
+# OS X temporary files
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Rush temporary files
+common/deploy/
+common/temp/
+common/autoinstallers/*/.npmrc
+**/.rush/temp/
+*.lock

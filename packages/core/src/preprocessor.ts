@@ -29,7 +29,7 @@ export function preprocess(
  * Create the visitor that will walk the ast.
  */
 function createVisitor<State>(
-  rootScope: Scope,
+  mut_rootScope: Scope,
   nodesToRemove: NodesToRemove,
   scopeToIdentifiersToRemoveMap: ScopeToIdentifiersToRemoveMap,
   isAssertionModuleName: (node: Readonly<acorn.Literal>) => boolean,
@@ -50,7 +50,7 @@ function createVisitor<State>(
     state: State,
     ancestors: ReadonlyArray<Readonly<acorn.Node>>,
   ) {
-    registerNode(rootScope, ancestors);
+    registerNode(mut_rootScope, ancestors);
   }
 
   /**
@@ -62,7 +62,7 @@ function createVisitor<State>(
     state: State,
     ancestors: ReadonlyArray<Readonly<acorn.Node>>,
   ) {
-    const scope = registerNode(rootScope, ancestors);
+    const scope = registerNode(mut_rootScope, ancestors);
 
     if (node.id !== null) {
       addIdentifiers(scope, [node.id.name]);
@@ -78,7 +78,7 @@ function createVisitor<State>(
     state: State,
     ancestors: ReadonlyArray<Readonly<acorn.Node>>,
   ) {
-    const scope = registerNode(rootScope, ancestors);
+    const scope = registerNode(mut_rootScope, ancestors);
     const identifiersToRemove = ensureIdentifiersToRemove(scopeToIdentifiersToRemoveMap, scope);
 
     addIdentifiers(scope, []);
@@ -105,7 +105,7 @@ function createVisitor<State>(
     state: State,
     ancestors: ReadonlyArray<Readonly<acorn.Node>>,
   ) {
-    const scope = registerNode(rootScope, ancestors);
+    const scope = registerNode(mut_rootScope, ancestors);
     const stack: Array<acorn.Pattern | acorn.AssignmentProperty> = node.declarations.map((declarator) => declarator.id);
 
     do {
@@ -169,14 +169,14 @@ function addIdentifiers(scope: Scope, identifiers: string[]): asserts scope is S
 /**
  * Gets the identifiers to remove for the given scope, creating it if needed.
  */
-function ensureIdentifiersToRemove(scopeToIdentifiersToRemoveMap: ScopeToIdentifiersToRemoveMap, scope: Scope) {
-  const toRemove = scopeToIdentifiersToRemoveMap.get(scope);
+function ensureIdentifiersToRemove(scopeToIdentifiersToRemoveMap: ScopeToIdentifiersToRemoveMap, mut_scope: Scope) {
+  const toRemove = scopeToIdentifiersToRemoveMap.get(mut_scope);
   if (toRemove !== undefined) {
     return toRemove;
   }
 
   const newToRemove: string[] = [];
-  scopeToIdentifiersToRemoveMap.set(scope, newToRemove);
+  scopeToIdentifiersToRemoveMap.set(mut_scope, newToRemove);
   return newToRemove;
 }
 
@@ -185,20 +185,20 @@ function ensureIdentifiersToRemove(scopeToIdentifiersToRemoveMap: ScopeToIdentif
  *
  * @returns The scope this node is in.
  */
-function registerNode(rootScope: Scope, ancestors: ReadonlyArray<Readonly<acorn.Node>>) {
+function registerNode(mut_rootScope: Scope, ancestors: ReadonlyArray<Readonly<acorn.Node>>) {
   assert(ancestors.length > 0);
 
-  let m_scope = rootScope;
-  let m_i = 1;
+  let mut_scope = mut_rootScope;
+  let mut_i = 1;
 
   do {
-    m_scope = ensureScope(m_scope, ancestors[m_i] ?? assertNever());
-    m_i++;
-  } while (m_i < ancestors.length);
+    mut_scope = ensureScope(mut_scope, ancestors[mut_i] ?? assertNever());
+    mut_i++;
+  } while (mut_i < ancestors.length);
 
-  assert(m_scope.parent !== null);
+  assert(mut_scope.parent !== null);
 
-  return m_scope.parent;
+  return mut_scope.parent;
 }
 
 /**
@@ -206,18 +206,18 @@ function registerNode(rootScope: Scope, ancestors: ReadonlyArray<Readonly<acorn.
  *
  * @returns The scope for the node.
  */
-function ensureScope(parentScope: Scope, node: Readonly<acorn.Node>) {
-  if (parentScope.children === undefined) {
-    parentScope.children = new Map();
+function ensureScope(mut_parentScope: Scope, node: Readonly<acorn.Node>) {
+  if (mut_parentScope.children === undefined) {
+    mut_parentScope.children = new Map();
   } else {
-    const scope = parentScope.children.get(node);
+    const scope = mut_parentScope.children.get(node);
     if (scope !== undefined) {
       return scope;
     }
   }
 
-  const newScope: Scope = createScope(node, parentScope);
-  parentScope.children.set(node, newScope);
+  const newScope: Scope = createScope(node, mut_parentScope);
+  mut_parentScope.children.set(node, newScope);
   return newScope;
 }
 

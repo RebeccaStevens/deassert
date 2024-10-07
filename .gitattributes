@@ -1,16 +1,13 @@
 * text=auto eol=lf
 
-*.js linguist-detectable=false
-*.mjs linguist-detectable=false
-*.cjs linguist-detectable=false
-/.husky/** linguist-detectable=false
+*.json                       linguist-language=JSON-with-Comments
 
-**/tsconfig.json linguist-language=jsonc
-**/tsconfig.*.json linguist-language=jsonc
-/.lintstagedrc linguist-language=json
-/.markdownlint.json linguist-language=jsonc
-/.vscode/*.json linguist-language=jsonc
+*.js                         linguist-detectable=false
+*.mjs                        linguist-detectable=false
+*.cjs                        linguist-detectable=false
 
-/CHANGELOG.md linguist-generated
+CHANGELOG.md                 linguist-generated
 
-/docs/** linguist-documentation
+docs/**                      linguist-documentation
+
+pnpm-lock.yaml               merge=text linguist-generated

@@ -1,5 +1,8 @@
 import { expect } from "vitest";
 
+/**
+ * Test that the code is the same as the expected code.
+ */
 export function compareCode(actual: string, expected: string): void {
   expect(strip(actual)).toBe(strip(expected));
 }

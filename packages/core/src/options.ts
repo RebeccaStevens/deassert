@@ -1,9 +1,8 @@
 import type * as acorn from "acorn";
 import type { SourceMapOptions } from "magic-string";
 
-/**
- * @typedef {import("./deassert").deassert} deassert
- */
+// eslint-disable-next-line ts/no-unused-vars -- Used in docs.
+import type { deassert } from "./deassert";
 
 /**
  * The options that can be given to the {@link deassert} function.
