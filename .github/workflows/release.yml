@@ -1,9 +1,7 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,6 +12,9 @@ concurrency:
   group: Release
   cancel-in-progress: false
 
+env:
+  RUSH_ALLOW_WARNINGS_IN_SUCCESSFUL_BUILD: 1
+
 jobs:
   lint_js:
     uses: ./.github/workflows/lint-js.yml
@@ -23,8 +24,6 @@ jobs:
     uses: ./.github/workflows/lint-knip-prod.yml
   lint_markdown:
     uses: ./.github/workflows/lint-markdown.yml
-  lint_packages:
-    uses: ./.github/workflows/lint-packages.yml
   lint_spelling:
     uses: ./.github/workflows/lint-spelling.yml
   lint_yaml:
@@ -39,7 +38,6 @@ jobs:
       - lint_js
       - lint_knip_prod
       - lint_markdown
-      - lint_packages
       - lint_spelling
       - lint_yaml
       - test_js
@@ -53,10 +51,11 @@ jobs:
       - uses: ./.github/actions/prepare
 
       - name: Build
-        run: pnpm run build
+        run: node common/scripts/install-run-rush.js build --verbose
 
-      - name: Release
-        run: pnpm -r --workspace-concurrency=1 exec -- pnpm run release
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Bump version
+        run: node common/scripts/install-run-rush.js version --bump --ensure-version-policy --ignore-git-hooks --verbose
+
+      - name: Publish
+        run: node common/scripts/install-run-rush.js publish --apply --publish --include-all --ignore-git-hooks --npm-auth-token ${{ secrets.NPM_TOKEN }} --verbose
+

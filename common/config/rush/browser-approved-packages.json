@@ -1,0 +1,266 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@eslint/compat",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@rebeccastevens/eslint-config",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@rollup/plugin-typescript",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@rollup/pluginutils",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@semantic-release/changelog",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@semantic-release/commit-analyzer",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@semantic-release/git",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@semantic-release/github",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@semantic-release/npm",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@semantic-release/release-notes-generator",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@stylistic/eslint-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@types/node",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@types/webpack",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@vitest/coverage-v8",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@vitest/eslint-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "acorn",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "acorn-walk",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "cspell",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "deassert",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "dedent",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "dts-bundle-generator",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-flat-config-utils",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-formatting-reporter",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-import-resolver-typescript",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-merge-processors",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-eslint-comments",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-format",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-functional",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-import-x",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-jsdoc",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-jsonc",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-markdown",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-n",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-no-only-tests",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-optimize-regex",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-promise",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-regexp",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-sonarjs",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-unicorn",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-vitest",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-yml",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "jsonc-eslint-parser",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "knip",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "magic-string",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "markdownlint-cli2",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "prettier",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rimraf",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rollup",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rollup-plugin-deassert",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rollup-plugin-dts-bundle-generator",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rollup-plugin-shebang-bin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rollup-plugin-ts",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "semantic-release",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "semantic-release-monorepo",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "sort-package-json",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "tsc-files",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "tslib",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "tsx",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "vitest",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "yaml-eslint-parser",
+      "allowedCategories": [ "production" ]
+    }
+  ]
+}

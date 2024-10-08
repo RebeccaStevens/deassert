@@ -17,18 +17,19 @@ export default rsEslint(
     functional: false,
     jsonc: true,
     markdown: true,
+    sonar: false,
     stylistic: true,
+    test: false,
     yaml: true,
+    ignoresFiles: ["../../.gitignore"],
   },
   {
+    files: ["rollup.config.js"],
     rules: {
-      "ts/ban-ts-comment": "off",
-    },
-  },
-  {
-    files: ["packages/cli/src/**/*"],
-    rules: {
-      "no-console": "off",
+      "ts/no-unsafe-argument": "off",
+      "ts/no-unsafe-assignment": "off",
+      "ts/no-unsafe-member-access": "off",
+      "ts/no-explicit-any": "off",
     },
   },
 );

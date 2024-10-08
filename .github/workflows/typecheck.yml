@@ -1,9 +1,15 @@
 name: Type Check
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
   workflow_call:
+
+env:
+  RUSH_ALLOW_WARNINGS_IN_SUCCESSFUL_BUILD: 1
 
 jobs:
   typecheck:
@@ -11,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
-      - run: pnpm run typecheck
+      - run: node common/scripts/install-run-rush.js typecheck --verbose
