@@ -75,7 +75,7 @@
     "lint-staged": "15.2.10",
     "markdownlint-cli2": "0.13.0",
     "prettier": "3.3.3",
-    "semantic-release": "24.1.2",
+    "semantic-release": "24.2.0",
     "semantic-release-monorepo": "8.0.2",
     "sort-package-json": "2.10.1",
     "tsc-files": "1.1.4",
