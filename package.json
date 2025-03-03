@@ -81,5 +81,5 @@
     "tsc-files": "1.1.4",
     "yaml-eslint-parser": "1.2.3"
   },
-  "packageManager": "pnpm@9.9.0"
+  "packageManager": "pnpm@10.5.2"
 }
