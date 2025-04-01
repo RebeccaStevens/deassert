@@ -13,7 +13,7 @@ importers:
         version: 1.1.1
       '@rebeccastevens/eslint-config':
         specifier: 3.2.2
-        version: 3.2.2(48c2a5d9ed2b0ef171b0977e54afaee1)
+        version: 3.2.2(acba0acbda90500f15b9016bb028dff4)
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@24.2.3(typescript@5.5.4))
@@ -51,8 +51,8 @@ importers:
         specifier: 9.13.0
         version: 9.13.0(jiti@1.21.6)
       eslint-config-prettier:
-        specifier: 9.1.0
-        version: 9.1.0(eslint@9.13.0(jiti@1.21.6))
+        specifier: 10.1.1
+        version: 10.1.1(eslint@9.13.0(jiti@1.21.6))
       eslint-flat-config-utils:
         specifier: 0.3.1
         version: 0.3.1
@@ -2809,8 +2809,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-prettier@9.1.0:
-    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
+  eslint-config-prettier@10.1.1:
+    resolution: {integrity: sha512-4EQQr6wXwS+ZJSzaR5ZCrYgLxqvUjdXctaEtBqHcbkW944B1NQyO4qpdHQbXBONfwxXdkAY81HH4+LUfrg+zPw==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -6572,7 +6572,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@rebeccastevens/eslint-config@3.2.2(48c2a5d9ed2b0ef171b0977e54afaee1)':
+  '@rebeccastevens/eslint-config@3.2.2(acba0acbda90500f15b9016bb028dff4)':
     dependencies:
       '@antfu/install-pkg': 0.3.4
       '@clack/prompts': 0.7.0
@@ -6584,7 +6584,7 @@ snapshots:
       '@typescript-eslint/eslint-plugin': 8.8.0(@typescript-eslint/parser@8.8.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4))(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4)
       '@typescript-eslint/parser': 8.8.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4)
       '@typescript-eslint/utils': 8.29.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4)
-      eslint-config-prettier: 9.1.0(eslint@9.13.0(jiti@1.21.6))
+      eslint-config-prettier: 10.1.1(eslint@9.13.0(jiti@1.21.6))
       eslint-flat-config-utils: 0.3.1
       eslint-formatting-reporter: 0.0.0(eslint@9.13.0(jiti@1.21.6))
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.8.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import-x@4.1.1(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.29.1)(eslint@9.13.0(jiti@1.21.6))
@@ -7907,7 +7907,7 @@ snapshots:
       eslint: 9.13.0(jiti@1.21.6)
       semver: 7.7.1
 
-  eslint-config-prettier@9.1.0(eslint@9.13.0(jiti@1.21.6)):
+  eslint-config-prettier@10.1.1(eslint@9.13.0(jiti@1.21.6)):
     dependencies:
       eslint: 9.13.0(jiti@1.21.6)
 
