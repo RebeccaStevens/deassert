@@ -46,7 +46,7 @@
     "@types/node": "22.5.2",
     "@typescript-eslint/eslint-plugin": "8.8.0",
     "@typescript-eslint/parser": "8.8.0",
-    "cspell": "8.17.5",
+    "cspell": "8.18.1",
     "eslint": "9.13.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-flat-config-utils": "0.3.1",
