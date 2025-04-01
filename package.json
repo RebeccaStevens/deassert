@@ -49,7 +49,7 @@
     "cspell": "8.18.1",
     "eslint": "9.13.0",
     "eslint-config-prettier": "10.1.1",
-    "eslint-flat-config-utils": "0.3.1",
+    "eslint-flat-config-utils": "2.0.1",
     "eslint-formatting-reporter": "0.0.0",
     "eslint-import-resolver-typescript": "3.6.3",
     "eslint-merge-processors": "0.1.0",
