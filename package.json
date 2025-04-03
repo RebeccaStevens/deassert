@@ -77,7 +77,7 @@
     "prettier": "3.3.3",
     "semantic-release": "24.2.3",
     "semantic-release-monorepo": "8.0.2",
-    "sort-package-json": "2.10.1",
+    "sort-package-json": "3.0.0",
     "tsc-files": "1.1.4",
     "yaml-eslint-parser": "1.2.3"
   },
