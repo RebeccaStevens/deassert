@@ -13,7 +13,7 @@ importers:
         version: 1.1.1
       '@rebeccastevens/eslint-config':
         specifier: 3.2.2
-        version: 3.2.2(2131ef32b34e3cba8919067a8c228288)
+        version: 3.2.2(cee835f5f98d770ebe7d90c60d3e11a8)
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@24.2.3(typescript@5.5.4))
@@ -105,8 +105,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1(eslint@9.25.1(jiti@1.21.6))
       eslint-plugin-unicorn:
-        specifier: 58.0.0
-        version: 58.0.0(eslint@9.25.1(jiti@1.21.6))
+        specifier: 59.0.0
+        version: 59.0.0(eslint@9.25.1(jiti@1.21.6))
       eslint-plugin-vitest:
         specifier: 0.5.4
         version: 0.5.4(@typescript-eslint/eslint-plugin@8.8.0(@typescript-eslint/parser@8.8.0(eslint@9.25.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.25.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.25.1(jiti@1.21.6))(typescript@5.5.4)(vitest@3.1.2(@types/node@22.5.2)(terser@5.31.6))
@@ -3074,8 +3074,8 @@ packages:
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
 
-  eslint-plugin-unicorn@58.0.0:
-    resolution: {integrity: sha512-fc3iaxCm9chBWOHPVjn+Czb/wHS0D2Mko7wkOdobqo9R2bbFObc4LyZaLTNy0mhZOP84nKkLhTUQxlLOZ7EjKw==}
+  eslint-plugin-unicorn@59.0.0:
+    resolution: {integrity: sha512-7IEeqkymGa7tr6wTWS4DolfXnfcE3QjcD0g7I+qCfV5GPMvVsFsLT7zTIYvnudqwAm5nWekdGIOTTXA93Sz9Ow==}
     engines: {node: ^18.20.0 || ^20.10.0 || >=21.0.0}
     peerDependencies:
       eslint: '>=9.22.0'
@@ -3250,8 +3250,8 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
-  find-up-simple@1.0.0:
-    resolution: {integrity: sha512-q7Us7kcjj2VMePAa02hDAF6d+MzsdsAWEwYyOpwUtlerRBkOEPBCRZrAV4XfcSN8fHAgaD0hP7miwoay6DCprw==}
+  find-up-simple@1.0.1:
+    resolution: {integrity: sha512-afd4O7zpqHeRyg4PfDQsXmlDe2PfdHtJt6Akt8jOWaApLOZk5JXs6VMR29lz03pRe9mpykrRCYIYxaJYcfpncQ==}
     engines: {node: '>=18'}
 
   find-up@2.1.0:
@@ -6707,7 +6707,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@rebeccastevens/eslint-config@3.2.2(2131ef32b34e3cba8919067a8c228288)':
+  '@rebeccastevens/eslint-config@3.2.2(cee835f5f98d770ebe7d90c60d3e11a8)':
     dependencies:
       '@antfu/install-pkg': 0.3.4
       '@clack/prompts': 0.7.0
@@ -6737,7 +6737,7 @@ snapshots:
       eslint-plugin-promise: 7.1.0(eslint@9.25.1(jiti@1.21.6))
       eslint-plugin-regexp: 2.6.0(eslint@9.25.1(jiti@1.21.6))
       eslint-plugin-sonarjs: 3.0.1(eslint@9.25.1(jiti@1.21.6))
-      eslint-plugin-unicorn: 58.0.0(eslint@9.25.1(jiti@1.21.6))
+      eslint-plugin-unicorn: 59.0.0(eslint@9.25.1(jiti@1.21.6))
       eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.8.0(@typescript-eslint/parser@8.8.0(eslint@9.25.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.25.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.25.1(jiti@1.21.6))(typescript@5.5.4)(vitest@3.1.2(@types/node@22.5.2)(terser@5.31.6))
       eslint-plugin-yml: 1.14.0(eslint@9.25.1(jiti@1.21.6))
       jsonc-eslint-parser: 2.4.0
@@ -8326,7 +8326,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-unicorn@58.0.0(eslint@9.25.1(jiti@1.21.6)):
+  eslint-plugin-unicorn@59.0.0(eslint@9.25.1(jiti@1.21.6)):
     dependencies:
       '@babel/helper-validator-identifier': 7.25.9
       '@eslint-community/eslint-utils': 4.5.1(eslint@9.25.1(jiti@1.21.6))
@@ -8336,12 +8336,12 @@ snapshots:
       core-js-compat: 3.41.0
       eslint: 9.25.1(jiti@1.21.6)
       esquery: 1.6.0
+      find-up-simple: 1.0.1
       globals: 16.0.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       jsesc: 3.1.0
       pluralize: 8.0.0
-      read-package-up: 11.0.0
       regexp-tree: 0.1.27
       regjsparser: 0.12.0
       semver: 7.7.1
@@ -8560,7 +8560,7 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  find-up-simple@1.0.0: {}
+  find-up-simple@1.0.1: {}
 
   find-up@2.1.0:
     dependencies:
@@ -9695,7 +9695,7 @@ snapshots:
 
   read-package-up@11.0.0:
     dependencies:
-      find-up-simple: 1.0.0
+      find-up-simple: 1.0.1
       read-pkg: 9.0.1
       type-fest: 4.24.0
 
