@@ -47,7 +47,7 @@
     "@typescript-eslint/eslint-plugin": "8.8.0",
     "@typescript-eslint/parser": "8.8.0",
     "cspell": "8.19.3",
-    "eslint": "9.23.0",
+    "eslint": "9.25.1",
     "eslint-config-prettier": "10.1.1",
     "eslint-flat-config-utils": "2.0.1",
     "eslint-formatting-reporter": "0.0.0",
