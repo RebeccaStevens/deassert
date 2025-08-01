@@ -13,7 +13,7 @@ importers:
         version: 1.1.1
       '@rebeccastevens/eslint-config':
         specifier: 3.2.2
-        version: 3.2.2(707f324e1d0e44c910c101da142785bf)
+        version: 3.2.2(f3db06cffcdf41636008ef043e6f3544)
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@24.2.7(typescript@5.5.4))
@@ -78,8 +78,8 @@ importers:
         specifier: 4.1.1
         version: 4.1.1(eslint@9.32.0(jiti@1.21.6))(typescript@5.5.4)
       eslint-plugin-jsdoc:
-        specifier: 51.3.2
-        version: 51.3.2(eslint@9.32.0(jiti@1.21.6))
+        specifier: 52.0.2
+        version: 52.0.2(eslint@9.32.0(jiti@1.21.6))
       eslint-plugin-jsonc:
         specifier: 2.16.0
         version: 2.16.0(eslint@9.32.0(jiti@1.21.6))
@@ -3033,8 +3033,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-jsdoc@51.3.2:
-    resolution: {integrity: sha512-sBmS2MoxbUuKE1wMn/jeHitlCwdk3jAkkpdo3TNA5qGADjiow9D5z/zJ3XScScDsNI2fzZJsmCyf5rc12oRbUA==}
+  eslint-plugin-jsdoc@52.0.2:
+    resolution: {integrity: sha512-fYrnc7OpRifxxKjH78Y9/D/EouQDYD3G++bpR1Y+A+fy+CMzKZAdGIiHTIxCd2U10hb2y1NxN5TJt9aupq1vmw==}
     engines: {node: '>=20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -6720,7 +6720,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@rebeccastevens/eslint-config@3.2.2(707f324e1d0e44c910c101da142785bf)':
+  '@rebeccastevens/eslint-config@3.2.2(f3db06cffcdf41636008ef043e6f3544)':
     dependencies:
       '@antfu/install-pkg': 0.3.4
       '@clack/prompts': 0.7.0
@@ -6741,7 +6741,7 @@ snapshots:
       eslint-plugin-format: 1.0.1(eslint@9.32.0(jiti@1.21.6))
       eslint-plugin-functional: 9.0.1(eslint@9.32.0(jiti@1.21.6))(typescript@5.5.4)
       eslint-plugin-import-x: 4.1.1(eslint@9.32.0(jiti@1.21.6))(typescript@5.5.4)
-      eslint-plugin-jsdoc: 51.3.2(eslint@9.32.0(jiti@1.21.6))
+      eslint-plugin-jsdoc: 52.0.2(eslint@9.32.0(jiti@1.21.6))
       eslint-plugin-jsonc: 2.16.0(eslint@9.32.0(jiti@1.21.6))
       eslint-plugin-markdown: 5.1.0(eslint@9.32.0(jiti@1.21.6))
       eslint-plugin-n: 17.10.2(eslint@9.32.0(jiti@1.21.6))
@@ -8276,7 +8276,7 @@ snapshots:
       - supports-color
     optional: true
 
-  eslint-plugin-jsdoc@51.3.2(eslint@9.32.0(jiti@1.21.6)):
+  eslint-plugin-jsdoc@52.0.2(eslint@9.32.0(jiti@1.21.6)):
     dependencies:
       '@es-joy/jsdoccomment': 0.52.0
       are-docs-informative: 0.0.2
