@@ -16,22 +16,22 @@ importers:
         version: 3.2.2(be9827487ca9e0c36f33fa731910e7fc)
       '@semantic-release/changelog':
         specifier: 6.0.3
-        version: 6.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 6.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/commit-analyzer':
         specifier: 13.0.1
-        version: 13.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 13.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/git':
         specifier: 10.0.1
-        version: 10.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 10.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/github':
         specifier: 11.0.3
-        version: 11.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 11.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/npm':
         specifier: 12.0.2
-        version: 12.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 12.0.2(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/release-notes-generator':
         specifier: 14.0.3
-        version: 14.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 14.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@stylistic/eslint-plugin':
         specifier: 4.4.1
         version: 4.4.1(eslint@9.30.1(jiti@1.21.6))(typescript@5.5.4)
@@ -132,11 +132,11 @@ importers:
         specifier: 3.3.3
         version: 3.3.3
       semantic-release:
-        specifier: 24.2.6
-        version: 24.2.6(typescript@5.5.4)
+        specifier: 24.2.7
+        version: 24.2.7(typescript@5.5.4)
       semantic-release-monorepo:
         specifier: 8.0.2
-        version: 8.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 8.0.2(semantic-release@24.2.7(typescript@5.5.4))
       sort-package-json:
         specifier: 3.0.0
         version: 3.0.0
@@ -155,22 +155,22 @@ importers:
     devDependencies:
       '@semantic-release/changelog':
         specifier: 6.0.3
-        version: 6.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 6.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/commit-analyzer':
         specifier: 13.0.1
-        version: 13.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 13.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/git':
         specifier: 10.0.1
-        version: 10.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 10.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/github':
         specifier: 11.0.3
-        version: 11.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 11.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/npm':
         specifier: 12.0.2
-        version: 12.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 12.0.2(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/release-notes-generator':
         specifier: 14.0.3
-        version: 14.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 14.0.3(semantic-release@24.2.7(typescript@5.5.4))
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -184,11 +184,11 @@ importers:
         specifier: 3.4.5
         version: 3.4.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@babel/runtime@7.25.6)(rollup@4.22.4)(typescript@5.5.4)
       semantic-release:
-        specifier: 24.2.6
-        version: 24.2.6(typescript@5.5.4)
+        specifier: 24.2.7
+        version: 24.2.7(typescript@5.5.4)
       semantic-release-monorepo:
         specifier: 8.0.2
-        version: 8.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 8.0.2(semantic-release@24.2.7(typescript@5.5.4))
       tsx:
         specifier: 4.19.0
         version: 4.19.0
@@ -210,22 +210,22 @@ importers:
     devDependencies:
       '@semantic-release/changelog':
         specifier: 6.0.3
-        version: 6.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 6.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/commit-analyzer':
         specifier: 13.0.1
-        version: 13.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 13.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/git':
         specifier: 10.0.1
-        version: 10.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 10.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/github':
         specifier: 11.0.3
-        version: 11.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 11.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/npm':
         specifier: 12.0.2
-        version: 12.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 12.0.2(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/release-notes-generator':
         specifier: 14.0.3
-        version: 14.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 14.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@vitest/coverage-v8':
         specifier: 3.2.4
         version: 3.2.4(vitest@3.2.4(@types/node@22.5.2)(terser@5.31.6))
@@ -242,11 +242,11 @@ importers:
         specifier: 3.4.5
         version: 3.4.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@babel/runtime@7.25.6)(rollup@4.22.4)(typescript@5.5.4)
       semantic-release:
-        specifier: 24.2.6
-        version: 24.2.6(typescript@5.5.4)
+        specifier: 24.2.7
+        version: 24.2.7(typescript@5.5.4)
       semantic-release-monorepo:
         specifier: 8.0.2
-        version: 8.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 8.0.2(semantic-release@24.2.7(typescript@5.5.4))
       tsx:
         specifier: 4.19.0
         version: 4.19.0
@@ -271,22 +271,22 @@ importers:
     devDependencies:
       '@semantic-release/changelog':
         specifier: 6.0.3
-        version: 6.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 6.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/commit-analyzer':
         specifier: 13.0.1
-        version: 13.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 13.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/git':
         specifier: 10.0.1
-        version: 10.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 10.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/github':
         specifier: 11.0.3
-        version: 11.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 11.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/npm':
         specifier: 12.0.2
-        version: 12.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 12.0.2(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/release-notes-generator':
         specifier: 14.0.3
-        version: 14.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 14.0.3(semantic-release@24.2.7(typescript@5.5.4))
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -297,11 +297,11 @@ importers:
         specifier: 3.4.5
         version: 3.4.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@babel/runtime@7.25.6)(rollup@4.22.4)(typescript@5.5.4)
       semantic-release:
-        specifier: 24.2.6
-        version: 24.2.6(typescript@5.5.4)
+        specifier: 24.2.7
+        version: 24.2.7(typescript@5.5.4)
       semantic-release-monorepo:
         specifier: 8.0.2
-        version: 8.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 8.0.2(semantic-release@24.2.7(typescript@5.5.4))
       tsx:
         specifier: 4.19.0
         version: 4.19.0
@@ -320,22 +320,22 @@ importers:
     devDependencies:
       '@semantic-release/changelog':
         specifier: 6.0.3
-        version: 6.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 6.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/commit-analyzer':
         specifier: 13.0.1
-        version: 13.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 13.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/git':
         specifier: 10.0.1
-        version: 10.0.1(semantic-release@24.2.6(typescript@5.5.4))
+        version: 10.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/github':
         specifier: 11.0.3
-        version: 11.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 11.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/npm':
         specifier: 12.0.2
-        version: 12.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 12.0.2(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/release-notes-generator':
         specifier: 14.0.3
-        version: 14.0.3(semantic-release@24.2.6(typescript@5.5.4))
+        version: 14.0.3(semantic-release@24.2.7(typescript@5.5.4))
       '@types/webpack':
         specifier: 5.28.5
         version: 5.28.5
@@ -349,11 +349,11 @@ importers:
         specifier: 3.4.5
         version: 3.4.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@babel/runtime@7.25.6)(rollup@4.22.4)(typescript@5.5.4)
       semantic-release:
-        specifier: 24.2.6
-        version: 24.2.6(typescript@5.5.4)
+        specifier: 24.2.7
+        version: 24.2.7(typescript@5.5.4)
       semantic-release-monorepo:
         specifier: 8.0.2
-        version: 8.0.2(semantic-release@24.2.6(typescript@5.5.4))
+        version: 8.0.2(semantic-release@24.2.7(typescript@5.5.4))
       tsx:
         specifier: 4.19.0
         version: 4.19.0
@@ -4681,8 +4681,8 @@ packages:
     peerDependencies:
       semantic-release: '>20'
 
-  semantic-release@24.2.6:
-    resolution: {integrity: sha512-D0cwjlO5RZzHHxAcsoF1HxiRLfC3ehw+ay+zntzFs6PNX6aV0JzKNG15mpxPipBYa/l4fHly88dHvgDyqwb1Ww==}
+  semantic-release@24.2.7:
+    resolution: {integrity: sha512-g7RssbTAbir1k/S7uSwSVZFfFXwpomUB9Oas0+xi9KStSCmeDXcA7rNhiskjLqvUe/Evhx8fVCT16OSa34eM5g==}
     engines: {node: '>=20.8.1'}
     hasBin: true
 
@@ -6825,15 +6825,15 @@ snapshots:
 
   '@sec-ant/readable-stream@0.4.1': {}
 
-  '@semantic-release/changelog@6.0.3(semantic-release@24.2.6(typescript@5.5.4))':
+  '@semantic-release/changelog@6.0.3(semantic-release@24.2.7(typescript@5.5.4))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
       fs-extra: 11.2.0
       lodash: 4.17.21
-      semantic-release: 24.2.6(typescript@5.5.4)
+      semantic-release: 24.2.7(typescript@5.5.4)
 
-  '@semantic-release/commit-analyzer@13.0.1(semantic-release@24.2.6(typescript@5.5.4))':
+  '@semantic-release/commit-analyzer@13.0.1(semantic-release@24.2.7(typescript@5.5.4))':
     dependencies:
       conventional-changelog-angular: 8.0.0
       conventional-changelog-writer: 8.0.0
@@ -6843,7 +6843,7 @@ snapshots:
       import-from-esm: 2.0.0
       lodash-es: 4.17.21
       micromatch: 4.0.8
-      semantic-release: 24.2.6(typescript@5.5.4)
+      semantic-release: 24.2.7(typescript@5.5.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -6851,7 +6851,7 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/git@10.0.1(semantic-release@24.2.6(typescript@5.5.4))':
+  '@semantic-release/git@10.0.1(semantic-release@24.2.7(typescript@5.5.4))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -6861,11 +6861,11 @@ snapshots:
       lodash: 4.17.21
       micromatch: 4.0.8
       p-reduce: 2.1.0
-      semantic-release: 24.2.6(typescript@5.5.4)
+      semantic-release: 24.2.7(typescript@5.5.4)
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@11.0.3(semantic-release@24.2.6(typescript@5.5.4))':
+  '@semantic-release/github@11.0.3(semantic-release@24.2.7(typescript@5.5.4))':
     dependencies:
       '@octokit/core': 7.0.2
       '@octokit/plugin-paginate-rest': 13.0.1(@octokit/core@7.0.2)
@@ -6882,12 +6882,12 @@ snapshots:
       lodash-es: 4.17.21
       mime: 4.0.4
       p-filter: 4.1.0
-      semantic-release: 24.2.6(typescript@5.5.4)
+      semantic-release: 24.2.7(typescript@5.5.4)
       url-join: 5.0.0
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/npm@12.0.2(semantic-release@24.2.6(typescript@5.5.4))':
+  '@semantic-release/npm@12.0.2(semantic-release@24.2.7(typescript@5.5.4))':
     dependencies:
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
@@ -6900,11 +6900,11 @@ snapshots:
       rc: 1.2.8
       read-pkg: 9.0.1
       registry-auth-token: 5.0.2
-      semantic-release: 24.2.6(typescript@5.5.4)
+      semantic-release: 24.2.7(typescript@5.5.4)
       semver: 7.7.2
       tempy: 3.1.0
 
-  '@semantic-release/release-notes-generator@14.0.3(semantic-release@24.2.6(typescript@5.5.4))':
+  '@semantic-release/release-notes-generator@14.0.3(semantic-release@24.2.7(typescript@5.5.4))':
     dependencies:
       conventional-changelog-angular: 8.0.0
       conventional-changelog-writer: 8.0.0
@@ -6916,7 +6916,7 @@ snapshots:
       into-stream: 7.0.0
       lodash-es: 4.17.21
       read-package-up: 11.0.0
-      semantic-release: 24.2.6(typescript@5.5.4)
+      semantic-release: 24.2.7(typescript@5.5.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -9938,7 +9938,7 @@ snapshots:
       refa: 0.12.1
       regexp-ast-analysis: 0.7.1
 
-  semantic-release-monorepo@8.0.2(semantic-release@24.2.6(typescript@5.5.4)):
+  semantic-release-monorepo@8.0.2(semantic-release@24.2.7(typescript@5.5.4)):
     dependencies:
       debug: 4.4.1
       execa: 5.1.1
@@ -9951,23 +9951,23 @@ snapshots:
       pkg-up: 3.1.0
       ramda: 0.27.2
       read-pkg: 5.2.0
-      semantic-release: 24.2.6(typescript@5.5.4)
-      semantic-release-plugin-decorators: 4.0.0(semantic-release@24.2.6(typescript@5.5.4))
+      semantic-release: 24.2.7(typescript@5.5.4)
+      semantic-release-plugin-decorators: 4.0.0(semantic-release@24.2.7(typescript@5.5.4))
       tempy: 1.0.1
     transitivePeerDependencies:
       - supports-color
 
-  semantic-release-plugin-decorators@4.0.0(semantic-release@24.2.6(typescript@5.5.4)):
+  semantic-release-plugin-decorators@4.0.0(semantic-release@24.2.7(typescript@5.5.4)):
     dependencies:
-      semantic-release: 24.2.6(typescript@5.5.4)
+      semantic-release: 24.2.7(typescript@5.5.4)
 
-  semantic-release@24.2.6(typescript@5.5.4):
+  semantic-release@24.2.7(typescript@5.5.4):
     dependencies:
-      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.6(typescript@5.5.4))
+      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.7(typescript@5.5.4))
       '@semantic-release/error': 4.0.0
-      '@semantic-release/github': 11.0.3(semantic-release@24.2.6(typescript@5.5.4))
-      '@semantic-release/npm': 12.0.2(semantic-release@24.2.6(typescript@5.5.4))
-      '@semantic-release/release-notes-generator': 14.0.3(semantic-release@24.2.6(typescript@5.5.4))
+      '@semantic-release/github': 11.0.3(semantic-release@24.2.7(typescript@5.5.4))
+      '@semantic-release/npm': 12.0.2(semantic-release@24.2.7(typescript@5.5.4))
+      '@semantic-release/release-notes-generator': 14.0.3(semantic-release@24.2.7(typescript@5.5.4))
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@5.5.4)
       debug: 4.4.1
