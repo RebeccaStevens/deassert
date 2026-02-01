@@ -13,7 +13,7 @@ importers:
         version: 2.0.0(eslint@9.39.2(jiti@1.21.6))
       '@rebeccastevens/eslint-config':
         specifier: 3.2.2
-        version: 3.2.2(c547a9dca77f9d1f7f9e064c044f1d0d)
+        version: 3.2.2(bc99e733cf42e5c094347aeacb35d982)
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@25.0.3(typescript@5.5.4))
@@ -54,8 +54,8 @@ importers:
         specifier: 10.1.1
         version: 10.1.1(eslint@9.39.2(jiti@1.21.6))
       eslint-flat-config-utils:
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 3.0.0
+        version: 3.0.0
       eslint-formatting-reporter:
         specifier: 0.0.0
         version: 0.0.0(eslint@9.39.2(jiti@1.21.6))
@@ -1521,12 +1521,16 @@ packages:
     resolution: {integrity: sha512-gBrxN88gOIf3R7ja5K9slwNayVcZgK6SOUORm2uBzTeIEfeVaIhOpCtTox3P6R7o2jLFwLFTLnC7kU/RGcYEgw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@eslint/config-helpers@0.5.2':
+    resolution: {integrity: sha512-a5MxrdDXEvqnIq+LisyCX6tQMPF/dSJpCfBgBauY+pNZ28yCtSsTvyTYrMhaI+LK26bVyCJfJkT0u8KIj2i1dQ==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
   '@eslint/core@0.17.0':
     resolution: {integrity: sha512-yL/sLrpmtDaFEiUj1osRP4TI2MDz1AddJL+jZ7KSqvBuliN4xqYY54IfdN8qD8Toa6g1iloph1fxQNkjOxrrpQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/core@1.0.0':
-    resolution: {integrity: sha512-PRfWP+8FOldvbApr6xL7mNCw4cJcSTq4GA7tYbgq15mRb0kWKO/wEB2jr+uwjFH3sZvEZneZyCUGTxsv4Sahyw==}
+  '@eslint/core@1.1.0':
+    resolution: {integrity: sha512-/nr9K9wkr3P1EzFTdFdMoLuo1PmIxjmwvPozwoSodjNBdefGujXQUF93u1DDZpEaTuDvMsIQddsd35BwtrW9Xw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@eslint/eslintrc@3.3.1':
@@ -2984,8 +2988,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-flat-config-utils@2.0.1:
-    resolution: {integrity: sha512-brf0eAgQ6JlKj3bKfOTuuI7VcCZvi8ZCD1MMTVoEvS/d38j8cByZViLFALH/36+eqB17ukmfmKq3bWzGvizejA==}
+  eslint-flat-config-utils@3.0.0:
+    resolution: {integrity: sha512-bzTam/pSnPANR0GUz4g7lo4fyzlQZwuz/h8ytsSS4w59N/JlXH/l7jmyNVBLxPz3B9/9ntz5ZLevGpazyDXJQQ==}
 
   eslint-formatting-reporter@0.0.0:
     resolution: {integrity: sha512-k9RdyTqxqN/wNYVaTk/ds5B5rA8lgoAmvceYN7bcZMBwU7TuXx5ntewJv81eF3pIL/CiJE+pJZm36llG8yhyyw==}
@@ -6642,7 +6646,7 @@ snapshots:
 
   '@eslint/compat@2.0.0(eslint@9.39.2(jiti@1.21.6))':
     dependencies:
-      '@eslint/core': 1.0.0
+      '@eslint/core': 1.1.0
     optionalDependencies:
       eslint: 9.39.2(jiti@1.21.6)
 
@@ -6658,11 +6662,15 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
 
+  '@eslint/config-helpers@0.5.2':
+    dependencies:
+      '@eslint/core': 1.1.0
+
   '@eslint/core@0.17.0':
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/core@1.0.0':
+  '@eslint/core@1.1.0':
     dependencies:
       '@types/json-schema': 7.0.15
 
@@ -6842,7 +6850,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@rebeccastevens/eslint-config@3.2.2(c547a9dca77f9d1f7f9e064c044f1d0d)':
+  '@rebeccastevens/eslint-config@3.2.2(bc99e733cf42e5c094347aeacb35d982)':
     dependencies:
       '@antfu/install-pkg': 0.3.4
       '@clack/prompts': 0.7.0
@@ -6855,7 +6863,7 @@ snapshots:
       '@typescript-eslint/parser': 8.8.0(eslint@9.39.2(jiti@1.21.6))(typescript@5.5.4)
       '@typescript-eslint/utils': 8.33.0(eslint@9.39.2(jiti@1.21.6))(typescript@5.5.4)
       eslint-config-prettier: 10.1.1(eslint@9.39.2(jiti@1.21.6))
-      eslint-flat-config-utils: 2.0.1
+      eslint-flat-config-utils: 3.0.0
       eslint-formatting-reporter: 0.0.0(eslint@9.39.2(jiti@1.21.6))
       eslint-import-resolver-typescript: 4.3.1(eslint-plugin-import-x@4.1.1(eslint@9.39.2(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.29.1)(eslint@9.39.2(jiti@1.21.6))
       eslint-merge-processors: 2.0.0(eslint@9.39.2(jiti@1.21.6))
@@ -8273,8 +8281,9 @@ snapshots:
     dependencies:
       eslint: 9.39.2(jiti@1.21.6)
 
-  eslint-flat-config-utils@2.0.1:
+  eslint-flat-config-utils@3.0.0:
     dependencies:
+      '@eslint/config-helpers': 0.5.2
       pathe: 2.0.3
 
   eslint-formatting-reporter@0.0.0(eslint@9.39.2(jiti@1.21.6)):
