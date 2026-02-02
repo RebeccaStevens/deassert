@@ -79,7 +79,7 @@
     "semantic-release-monorepo": "8.0.2",
     "sort-package-json": "3.0.0",
     "tsc-files": "1.1.4",
-    "yaml-eslint-parser": "1.2.3"
+    "yaml-eslint-parser": "2.0.0"
   },
   "packageManager": "pnpm@10.5.2"
 }
