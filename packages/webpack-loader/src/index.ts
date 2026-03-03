@@ -1,4 +1,4 @@
-import acorn from "acorn";
+import * as acorn from "acorn";
 import deassert, { type Options as DeassertOptions } from "deassert";
 import type { LoaderContext, LoaderDefinitionFunction } from "webpack";
 

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "esnext",
     "module": "esnext",
     "lib": ["esnext"],
     "types": ["node"],
@@ -14,10 +15,8 @@
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
     "skipLibCheck": true,
-    "noEmit": true,
     "noEmitOnError": true,
     "sourceMap": false,
-    "declaration": false,
     "declarationMap": false,
     "alwaysStrict": true,
     "jsx": "preserve",
@@ -37,9 +36,10 @@
     "noPropertyAccessFromIndexSignature": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
 
     "rootDir": ".",
-    "baseUrl": ".",
     "paths": {
       "deassert": ["./packages/core/src/index.ts"],
       "deassert-cli": ["./packages/cli/src/index.ts"],
