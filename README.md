@@ -112,7 +112,7 @@ try {
 
   console.log((assert(result.length > 0), result));
 } catch (error) {
-  assert(error instanceof Error, "Unexpected Error.");
+  assert(Error.isError(error), "Unexpected Error.");
   assert(!(error instanceof AssertionError), error);
 
   console.error(error);

@@ -113,9 +113,7 @@ function createVisitor<State>(
 
       switch (element.type) {
         case "Identifier": {
-          if (scope.identifiers === undefined) {
-            scope.identifiers = [];
-          }
+          scope.identifiers ??= [];
           scope.identifiers.push(element.name);
           break;
         }
@@ -188,17 +186,17 @@ function ensureIdentifiersToRemove(scopeToIdentifiersToRemoveMap: ScopeToIdentif
 function registerNode(rootScope: Scope, ancestors: ReadonlyArray<Readonly<acorn.Node>>) {
   assert(ancestors.length > 0);
 
-  let m_scope = rootScope;
-  let m_i = 1;
+  let mut_scope = rootScope;
+  let mut_i = 1;
 
   do {
-    m_scope = ensureScope(m_scope, ancestors[m_i] ?? assertNever());
-    m_i++;
-  } while (m_i < ancestors.length);
+    mut_scope = ensureScope(mut_scope, ancestors[mut_i] ?? assertNever());
+    mut_i++;
+  } while (mut_i < ancestors.length);
 
-  assert(m_scope.parent !== null);
+  assert(mut_scope.parent !== null);
 
-  return m_scope.parent;
+  return mut_scope.parent;
 }
 
 /**

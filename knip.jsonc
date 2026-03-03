@@ -4,25 +4,9 @@
     "packages/*": {
       "entry": ["src/index.ts!", "src/cli.ts!", "tests/**/*.test.ts"],
       "project": ["src/**/*.ts!", "tests/**/*.{js,ts}"],
-      "ignoreDependencies": [
-        // semantic-release
-        "semantic-release-monorepo",
-        "@semantic-release/changelog",
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/git",
-        "@semantic-release/github",
-        "@semantic-release/npm",
-        "@semantic-release/release-notes-generator",
-
-        // Unknown reason for issue.
-        "@vitest/coverage-v8",
-      ],
     },
   },
   "ignoreDependencies": [
-    // semantic-release
-    "semantic-release-monorepo",
-
     // Lint staged
     "tsc-files",
 

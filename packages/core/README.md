@@ -104,7 +104,8 @@ undefined
 
 ##### `acornOptions`
 
-The options provided to [Acorn](https://www.npmjs.com/package/acorn) to parse the input code. These are not used if an AST is provided.
+The options provided to [Acorn](https://www.npmjs.com/package/acorn) to parse the input code.
+These are not used if an AST is provided.
 
 ###### default
 

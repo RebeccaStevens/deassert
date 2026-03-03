@@ -1,20 +1,16 @@
 // @ts-check
 import rsEslint from "@rebeccastevens/eslint-config";
 
-export default rsEslint(
+/** @type {Promise<import("eslint").Linter.Config[]>} */
+const config = rsEslint(
   {
     projectRoot: import.meta.dirname,
     mode: "library",
     typescript: {
-      parserOptions: {
-        projectService: {
-          allowDefaultProject: ["*.js"],
-          defaultProject: "./tsconfig.json",
-        },
-      },
+      unsafe: "off",
     },
     formatters: true,
-    functional: false,
+    functional: "none",
     jsonc: true,
     markdown: true,
     stylistic: true,
@@ -23,6 +19,7 @@ export default rsEslint(
   {
     rules: {
       "ts/ban-ts-comment": "off",
+      "import/extensions": "off",
     },
   },
   {
@@ -32,3 +29,5 @@ export default rsEslint(
     },
   },
 );
+
+export default config;

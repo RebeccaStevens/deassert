@@ -1,5 +1,6 @@
+import rollupPluginTypescript from "@rollup/plugin-typescript";
 import type { RollupOptions } from "rollup";
-import rollupPluginTs from "rollup-plugin-ts";
+import generateDtsBundle from "rollup-plugin-dts-bundle-generator-2";
 import { tsImport } from "tsx/esm/api";
 
 import pkg from "./package.json" with { type: "json" };
@@ -27,6 +28,7 @@ export default {
       file: pkg.exports.import,
       format: "esm",
       sourcemap: false,
+      importAttributesKey: "with",
     },
     {
       file: pkg.exports.require,
@@ -36,12 +38,22 @@ export default {
   ],
 
   plugins: [
-    rollupPluginTs({
-      transpileOnly: true,
+    rollupPluginTypescript({
       tsconfig: "./tsconfig.json",
+      outDir: "dist",
+      noCheck: true,
     }),
     rollupPluginDeassert({
-      include: ["**/*.ts"],
+      include: ["**/*.{js,ts}"],
+    }),
+    generateDtsBundle({
+      compilation: {
+        preferredConfigPath: "./tsconfig.json",
+      },
+      output: {
+        exportReferencedTypes: false,
+        inlineDeclareExternals: true,
+      },
     }),
   ],
 
@@ -53,9 +65,12 @@ export default {
   },
 
   external: (source) => {
-    if (source.startsWith("node:") || externalDependencies.some((dep) => source.startsWith(dep))) {
+    if (
+      source.startsWith("node:") ||
+      externalDependencies.some((dep) => dep === source || source.startsWith(`${dep}/`))
+    ) {
       return true;
     }
     return undefined;
   },
-} as RollupOptions;
+} satisfies RollupOptions;

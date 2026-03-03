@@ -1,13 +1,15 @@
-import type { UserConfig } from "vitest/config";
+import tsconfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "vitest/config";
 
-export default {
+export default defineConfig({
+  plugins: [tsconfigPaths()],
+
   test: {
     include: ["./**/*.test.ts"],
-    exclude: ["bin", "dist", "node_modules"],
+    exclude: ["dist", "node_modules"],
     coverage: {
-      all: true,
       include: ["src"],
-      exclude: ["bin", "dist"],
+      exclude: ["dist"],
       reporter: ["lcov", "text"],
       watermarks: {
         lines: [80, 95],
@@ -17,4 +19,4 @@ export default {
       },
     },
   },
-} as UserConfig;
+});
