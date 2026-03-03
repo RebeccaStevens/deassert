@@ -3,6 +3,7 @@ import type { RollupOptions } from "rollup";
 import generateDtsBundle from "rollup-plugin-dts-bundle-generator-2";
 import { tsImport } from "tsx/esm/api";
 
+// @ts-ignore
 import pkg from "./package.json" with { type: "json" };
 
 const { default: rollupPluginDeassert } = (await tsImport(
