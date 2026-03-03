@@ -3,7 +3,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@eslint-community/eslint-plugin-eslint-comments",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@eslint/compat",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@eslint/markdown",
       "allowedCategories": [ "production" ]
     },
     {
@@ -159,6 +167,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "eslint-plugin-prettier",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "eslint-plugin-promise",
       "allowedCategories": [ "production" ]
     },
@@ -183,6 +195,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "jiti",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "jsonc-eslint-parser",
       "allowedCategories": [ "production" ]
     },
@@ -203,6 +219,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "publint",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "rimraf",
       "allowedCategories": [ "production" ]
     },
@@ -216,6 +236,10 @@
     },
     {
       "name": "rollup-plugin-dts-bundle-generator",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rollup-plugin-dts-bundle-generator-2",
       "allowedCategories": [ "production" ]
     },
     {

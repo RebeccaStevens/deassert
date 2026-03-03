@@ -3,8 +3,8 @@ import { ok as assert, fail as assertNever } from "node:assert/strict";
 import type * as acorn from "acorn";
 import { type AncestorVisitors, ancestor as ancestorWalk } from "acorn-walk";
 
-import type { NodesToRemove, Scope, ScopeToIdentifiersToRemoveMap } from "./types";
-import { assertNeverAndLog, isNotNull } from "./utils";
+import type { NodesToRemove, Scope, ScopeToIdentifiersToRemoveMap } from "./types.ts";
+import { assertNeverAndLog, isNotNull } from "./utils.ts";
 
 /**
  * Walk the ast to gather all the infomation we need to process the code.
@@ -113,9 +113,7 @@ function createVisitor<State>(
 
       switch (element.type) {
         case "Identifier": {
-          if (scope.identifiers === undefined) {
-            scope.identifiers = [];
-          }
+          scope.identifiers ??= [];
           scope.identifiers.push(element.name);
           break;
         }

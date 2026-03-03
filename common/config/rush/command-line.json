@@ -85,6 +85,30 @@
     },
     {
       "commandKind": "bulk",
+      "name": "lint:md-full",
+      "summary": "Run \"lint:md-full\" on each package",
+      "enableParallelism": true,
+      "allowWarningsInSuccessfulBuild": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "lint:md-full-fix",
+      "summary": "Run \"lint:md-full-fix\" on each package",
+      "enableParallelism": true,
+      "allowWarningsInSuccessfulBuild": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "lint:package",
+      "summary": "Run \"lint:package\" on each package",
+      "enableParallelism": true,
+      "allowWarningsInSuccessfulBuild": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
       "name": "lint:spelling",
       "summary": "Run \"lint:spelling\" on each package",
       "enableParallelism": true,
@@ -109,8 +133,8 @@
     },
     {
       "commandKind": "bulk",
-      "name": "test-run",
-      "summary": "Run \"test-run\" on each package",
+      "name": "test:js-run",
+      "summary": "Run \"test:js-run\" on each package",
       "enableParallelism": true,
       "allowWarningsInSuccessfulBuild": true,
       "ignoreMissingScript": true

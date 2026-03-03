@@ -26,7 +26,7 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "9.12.0",
+  "pnpmVersion": "10.30.3",
 
   /**
    * Older releases of the Node.js engine may be missing features required by your system.

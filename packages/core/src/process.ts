@@ -3,7 +3,7 @@ import { ok as assert, fail as assertNever } from "node:assert/strict";
 import type * as acorn from "acorn";
 import type MagicString from "magic-string";
 
-import { preprocess } from "./preprocessor";
+import { preprocess } from "./preprocessor.ts";
 import {
   isConditionalExpression,
   isExpression,
@@ -12,9 +12,9 @@ import {
   isImportDeclaration,
   isLogicalExpression,
   isSequenceExpression,
-} from "./type-guards";
-import type { ReadonlyNodesToRemove, ReadonlyScope, ReadonlyScopeToIdentifiersToRemoveMap, Scope } from "./types";
-import { assertNeverAndLog } from "./utils";
+} from "./type-guards.ts";
+import type { ReadonlyNodesToRemove, ReadonlyScope, ReadonlyScopeToIdentifiersToRemoveMap, Scope } from "./types.ts";
+import { assertNeverAndLog } from "./utils.ts";
 
 /**
  * Processes the provided AST to remove assert statements and assertion imports.

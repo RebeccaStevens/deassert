@@ -1,2 +1,2 @@
-export { deassert as default } from "./deassert";
-export { type Options } from "./options";
+export { deassert as default } from "./deassert.ts";
+export { type Options } from "./options.ts";

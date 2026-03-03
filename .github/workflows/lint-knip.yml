@@ -17,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
-      - run: node common/scripts/install-run-rush.js lint:knip:production --verbose
+      - run: node common/scripts/install-run-rush.js lint:knip

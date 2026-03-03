@@ -2,9 +2,9 @@ import dedent from "dedent";
 import MagicString from "magic-string";
 import { describe, it } from "vitest";
 
-import deassert from "../src";
+import deassert from "../src/index.ts";
 
-import { compareCode } from "./utils";
+import { compareCode } from "./utils.ts";
 
 describe("call statements", () => {
   it("removes assertion call statements", () => {

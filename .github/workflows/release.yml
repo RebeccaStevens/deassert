@@ -57,5 +57,5 @@ jobs:
         run: node common/scripts/install-run-rush.js version --bump --ensure-version-policy --ignore-git-hooks --verbose
 
       - name: Publish
-        run: node common/scripts/install-run-rush.js publish --apply --publish --include-all --ignore-git-hooks --npm-auth-token ${{ secrets.NPM_TOKEN }} --verbose
+        run: node common/scripts/install-run-rush.js publish --apply --publish --include-all --ignore-git-hooks --verbose
 

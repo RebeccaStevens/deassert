@@ -1,8 +1,8 @@
 import * as acorn from "acorn";
 import MagicString, { type SourceMap } from "magic-string";
 
-import { type FullOptions, type Options, defaultOptions, defaultSourceMapOptions } from "./options";
-import { process } from "./process";
+import { type FullOptions, type Options, defaultOptions, defaultSourceMapOptions } from "./options.ts";
+import { process } from "./process.ts";
 
 /**
  * Remove assertions form the given code, returning the changes.

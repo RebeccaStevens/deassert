@@ -1,11 +1,10 @@
-import type { UserConfig } from "vitest/config";
+import { defineConfig } from "vitest/config";
 
-export default {
+export default defineConfig({
   test: {
     include: ["./**/*.test.ts"],
     exclude: ["bin", "dist", "node_modules"],
     coverage: {
-      all: true,
       include: ["src"],
       exclude: ["bin", "dist"],
       reporter: ["lcov", "text"],
@@ -17,4 +16,4 @@ export default {
       },
     },
   },
-} as UserConfig;
+});

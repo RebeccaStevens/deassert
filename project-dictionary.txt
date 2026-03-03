@@ -18,6 +18,7 @@ plugh
 quux
 qux
 Rebecca
+rushx
 sonarjs
 Stevens
 thud

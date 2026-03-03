@@ -1,11 +1,15 @@
 // @ts-check
 import rsEslint from "@rebeccastevens/eslint-config";
 
-export default rsEslint(
+/**
+ * @type {Promise<import("eslint").Linter.Config[]>}
+ */
+const config = rsEslint(
   {
     projectRoot: import.meta.dirname,
     mode: "library",
     typescript: {
+      unsafe: "off",
       parserOptions: {
         projectService: {
           allowDefaultProject: ["*.js"],
@@ -24,12 +28,11 @@ export default rsEslint(
     ignoresFiles: ["../../.gitignore"],
   },
   {
-    files: ["rollup.config.js"],
+    files: ["rollup.config.ts"],
     rules: {
-      "ts/no-unsafe-argument": "off",
-      "ts/no-unsafe-assignment": "off",
-      "ts/no-unsafe-member-access": "off",
       "ts/no-explicit-any": "off",
     },
   },
 );
+
+export default config;
