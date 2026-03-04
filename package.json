@@ -15,7 +15,6 @@
   "scripts": {
     "build": "pnpm --stream -r build",
     "lint": "eslint && pnpm run lint:md && pnpm run lint:spelling && pnpm run lint:knip && pnpm run lint:packages",
-    "lint-fix": "eslint --fix && pnpm run lint:md-fix && pnpm run lint:packages-fix",
     "lint:js": "eslint \"**/*.?([cm])[jt]s?(x)\"",
     "lint:js-fix": "eslint \"**/*.?([cm])[jt]s?(x)\" --fix",
     "lint:knip": "knip",
@@ -28,9 +27,10 @@
     "lint:spelling": "cspell lint --no-progress --show-suggestions --show-context --dot \"**\" \".github/**/*\"",
     "lint:yaml": "eslint \"**/*.y?(a)ml\"",
     "lint:yaml-fix": "eslint \"**/*.y?(a)ml\" --fix",
+    "lint-fix": "eslint --fix && pnpm run lint:md-fix && pnpm run lint:packages-fix",
     "prepare": "husky",
     "release": "pnpm -r --workspace-concurrency=1 release",
-    "test": "pnpm --stream -r test",
+    "test": "pnpm --stream -r test:js-run",
     "typecheck": "pnpm --stream -r typecheck"
   },
   "devDependencies": {
@@ -65,6 +65,7 @@
     "eslint-plugin-unicorn": "63.0.0",
     "eslint-plugin-yml": "3.3.0",
     "husky": "9.1.7",
+    "jiti": "2.6.1",
     "jsonc-eslint-parser": "3.1.0",
     "knip": "5.85.0",
     "lint-staged": "16.3.1",

@@ -44,9 +44,8 @@
     "dist/"
   ],
   "scripts": {
-    "build": "rimraf bin dist && rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript --configImportAttributesKey with",
+    "build": "rimraf dist && rollup -c rollup.config.ts",
     "lint": "eslint && pnpm run lint:spelling && pnpm run lint:packages",
-    "lint-fix": "eslint --fix && pnpm run lint:packages-fix",
     "lint:js": "eslint \"**/*.?([cm])[jt]s?(x)\"",
     "lint:js-fix": "eslint \"**/*.?([cm])[jt]s?(x)\" --fix",
     "lint:packages": "pnpm dedupe --check",
@@ -54,6 +53,7 @@
     "lint:spelling": "cspell lint --no-progress --show-suggestions --show-context --dot \"**\" \".github/**/*\"",
     "lint:yaml": "eslint \"**/*.y?(a)ml\"",
     "lint:yaml-fix": "eslint \"**/*.y?(a)ml\" --fix",
+    "lint-fix": "eslint --fix && pnpm run lint:packages-fix",
     "release": "pnpm dlx --package semantic-release --package semantic-release-monorepo --package @semantic-release/changelog --package @semantic-release/commit-analyzer --package @semantic-release/git --package @semantic-release/github --package @semantic-release/npm --package @semantic-release/release-notes-generator --package semantic-release-publint semantic-release",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
@@ -67,7 +67,6 @@
     "rimraf": "6.1.3",
     "rollup": "4.59.0",
     "rollup-plugin-dts-bundle-generator-2": "2.0.0",
-    "tsx": "4.21.0",
     "typescript": "5.9.3"
   },
   "packageManager": "pnpm@10.30.3"

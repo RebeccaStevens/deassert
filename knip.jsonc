@@ -2,10 +2,12 @@
   "$schema": "node_modules/knip/schema-jsonc.json",
   "workspaces": {
     "packages/*": {
-      "entry": ["src/index.ts!", "src/cli.ts!", "tests/**/*.test.ts"],
-      "project": ["src/**/*.ts!", "tests/**/*.{js,ts}"],
+      "entry": ["src/index.{js,ts}"],
+      "project": ["**/*.{js,ts}"],
     },
   },
+  // TODO: Figure out why these are reported as unused.
+  "ignore": ["common/**/*.{js,ts}"],
   "ignoreDependencies": [
     // Lint staged
     "tsc-files",

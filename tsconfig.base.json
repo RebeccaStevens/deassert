@@ -38,6 +38,7 @@
     "allowUnusedLabels": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "tsBuildInfoFile": "${configDir}/tsconfig.tsbuildinfo",
 
     "rootDir": ".",
     "paths": {

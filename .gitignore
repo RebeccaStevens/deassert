@@ -5,6 +5,6 @@ coverage/
 dist/
 
 tsconfig.tsbuildinfo
-rollup.config-*.mjs
+**/.rollup.cache/
 
 *.log

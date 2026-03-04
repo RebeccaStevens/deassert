@@ -2,15 +2,11 @@ import rollupPluginTypescript from "@rollup/plugin-typescript";
 import type { RollupOptions } from "rollup";
 import generateDtsBundle from "rollup-plugin-dts-bundle-generator-2";
 import rollupPluginShebang from "rollup-plugin-shebang-bin";
-import { tsImport } from "tsx/esm/api";
+
+import { rollupPluginDeassert } from "../../common/rollup.ts";
 
 // @ts-ignore
 import pkg from "./package.json" with { type: "json" };
-
-const { default: rollupPluginDeassert } = (await tsImport(
-  "../rollup-plugin/src/index.ts",
-  import.meta.url,
-)) as typeof import("../rollup-plugin/src/index.ts");
 
 type PackageJSON = typeof pkg & {
   dependencies?: Record<string, string>;
@@ -37,9 +33,8 @@ export default {
   plugins: [
     rollupPluginTypescript({
       tsconfig: "./tsconfig.json",
-      outDir: "dist",
+      outDir: "bin",
       noCheck: true,
-      declaration: false,
     }),
     rollupPluginDeassert({
       include: ["**/*.{js,ts}"],
