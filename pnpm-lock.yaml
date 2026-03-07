@@ -19,7 +19,7 @@ importers:
         version: 7.5.1
       '@rebeccastevens/eslint-config':
         specifier: 3.9.6
-        version: 3.9.6(f2aea6797aae8f5473d5939a41023a75)
+        version: 3.9.6(9407fb838b6d50b48540dcd99d284c0f)
       '@stylistic/eslint-plugin':
         specifier: 5.9.0
         version: 5.9.0(eslint@10.0.2(jiti@2.6.1))
@@ -96,8 +96,8 @@ importers:
         specifier: 63.0.0
         version: 63.0.0(eslint@10.0.2(jiti@2.6.1))
       eslint-plugin-yml:
-        specifier: 3.3.0
-        version: 3.3.0(eslint@10.0.2(jiti@2.6.1))
+        specifier: 3.3.1
+        version: 3.3.1(eslint@10.0.2(jiti@2.6.1))
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -111,8 +111,8 @@ importers:
         specifier: 5.85.0
         version: 5.85.0(@types/node@22.19.13)(typescript@5.9.3)
       lint-staged:
-        specifier: 16.3.1
-        version: 16.3.1
+        specifier: 16.3.2
+        version: 16.3.2
       markdownlint-cli2:
         specifier: 0.21.0
         version: 0.21.0
@@ -2326,8 +2326,8 @@ packages:
     peerDependencies:
       eslint: '>=9.38.0'
 
-  eslint-plugin-yml@3.3.0:
-    resolution: {integrity: sha512-kRja5paNrMfZnbNqDbZSFrSHz5x7jmGBQq7d6z/+wRvWD4Y0yb1fbjojBg3ReMewFhBB7nD2nPC86+m3HmILJA==}
+  eslint-plugin-yml@3.3.1:
+    resolution: {integrity: sha512-isntsZchaTqDMNNkD+CakrgA/pdUoJ45USWBKpuqfAW1MCuw731xX/vrXfoJFZU3tTFr24nCbDYmDfT2+g4QtQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24.0.0}
     peerDependencies:
       eslint: '>=9.38.0'
@@ -2910,8 +2910,8 @@ packages:
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
 
-  lint-staged@16.3.1:
-    resolution: {integrity: sha512-bqvvquXzFBAlSbluugR4KXAe4XnO/QZcKVszpkBtqLWa2KEiVy8n6Xp38OeUbv/gOJOX4Vo9u5pFt/ADvbm42Q==}
+  lint-staged@16.3.2:
+    resolution: {integrity: sha512-xKqhC2AeXLwiAHXguxBjuChoTTWFC6Pees0SHPwOpwlvI3BH7ZADFPddAdN3pgo3aiKgPUx/bxE78JfUnxQnlg==}
     engines: {node: '>=20.17'}
     hasBin: true
 
@@ -4581,7 +4581,7 @@ snapshots:
 
   '@pkgr/core@0.2.9': {}
 
-  '@rebeccastevens/eslint-config@3.9.6(f2aea6797aae8f5473d5939a41023a75)':
+  '@rebeccastevens/eslint-config@3.9.6(9407fb838b6d50b48540dcd99d284c0f)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 1.1.0
@@ -4614,7 +4614,7 @@ snapshots:
       eslint-plugin-regexp: 3.0.0(eslint@10.0.2(jiti@2.6.1))
       eslint-plugin-sonarjs: 4.0.0(eslint@10.0.2(jiti@2.6.1))
       eslint-plugin-unicorn: 63.0.0(eslint@10.0.2(jiti@2.6.1))
-      eslint-plugin-yml: 3.3.0(eslint@10.0.2(jiti@2.6.1))
+      eslint-plugin-yml: 3.3.1(eslint@10.0.2(jiti@2.6.1))
       jsonc-eslint-parser: 3.1.0
       prettier: 3.8.1
       sort-package-json: 3.6.1
@@ -5941,7 +5941,7 @@ snapshots:
       semver: 7.7.4
       strip-indent: 4.1.1
 
-  eslint-plugin-yml@3.3.0(eslint@10.0.2(jiti@2.6.1)):
+  eslint-plugin-yml@3.3.1(eslint@10.0.2(jiti@2.6.1)):
     dependencies:
       '@eslint/core': 1.1.0
       '@eslint/plugin-kit': 0.6.0
@@ -6566,7 +6566,7 @@ snapshots:
     dependencies:
       uc.micro: 2.1.0
 
-  lint-staged@16.3.1:
+  lint-staged@16.3.2:
     dependencies:
       commander: 14.0.3
       listr2: 9.0.5
