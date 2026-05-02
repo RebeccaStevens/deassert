@@ -32,6 +32,7 @@ jobs:
             core
             rollup-plugin
             webpack-loader
+            swc-plugin
             deps
             dev-deps
             peer-deps
