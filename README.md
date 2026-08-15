@@ -64,6 +64,7 @@ It's designed to be used in your production builds.
 - [CLI](./packages/cli/) [![npm version](https://img.shields.io/npm/v/deassert-cli.svg)](https://www.npmjs.com/package/deassert-cli)
 - [Rollup Plugin](./packages/rollup-plugin/) [![npm version](https://img.shields.io/npm/v/rollup-plugin-deassert.svg)](https://www.npmjs.com/package/rollup-plugin-deassert)
 - [Webpack Loader](./packages/webpack-loader/) [![npm version](https://img.shields.io/npm/v/deassert-loader.svg)](https://www.npmjs.com/package/deassert-loader)
+- [SWC Plugin](./packages/swc-plugin/) [![npm version](https://img.shields.io/npm/v/swc-plugin-deassert.svg)](https://www.npmjs.com/package/swc-plugin-deassert)
 
 ## Example
 
