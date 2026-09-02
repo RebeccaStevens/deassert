@@ -19,7 +19,7 @@ importers:
         version: 8.0.0
       '@rebeccastevens/eslint-config':
         specifier: 3.9.7
-        version: 3.9.7(0ecc1dc1f8e07e3bd7765abaa1059904)
+        version: 3.9.7(998f4555390ce7b64918777b4cf22f99)
       '@stylistic/eslint-plugin':
         specifier: 5.10.0
         version: 5.10.0(eslint@10.9.1(jiti@2.6.1))
@@ -66,8 +66,8 @@ importers:
         specifier: 4.16.2
         version: 4.16.2(@typescript-eslint/utils@8.69.0(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.2))(eslint@10.9.1(jiti@2.6.1))
       eslint-plugin-jsdoc:
-        specifier: 63.0.0
-        version: 63.0.0(eslint@10.9.1(jiti@2.6.1))
+        specifier: 64.3.1
+        version: 64.3.1(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.2)
       eslint-plugin-jsonc:
         specifier: 3.1.2
         version: 3.1.2(eslint@10.9.1(jiti@2.6.1))
@@ -548,9 +548,9 @@ packages:
   '@emnapi/wasi-threads@1.2.2':
     resolution: {integrity: sha512-c95qOXkHdydNKhscBTebqEC1CVAZpyqOfVfBzQ1qgzyl3gfeldUjIggDbIZgDKsHLgnsM+igH7TJ/eAasaVuMA==}
 
-  '@es-joy/jsdoccomment@0.86.0':
-    resolution: {integrity: sha512-ukZmRQ81WiTpDWO6D/cTBM7XbrNtutHKvAVnZN/8pldAwLoJArGOvkNyxPTBGsPjsoaQBJxlH+tE2TNA/92Qgw==}
-    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+  '@es-joy/jsdoccomment@0.95.1':
+    resolution: {integrity: sha512-LO/RI08Fo9bhXwB7Od9G+1j3eSNq63+ZS5CQO8YLXHbDg6kx6S/DhTeY0+Fc9uZrjK1zZSyTx8Sg5gv5DIoCnA==}
+    engines: {node: ^22.22.2 || >=24.15.0}
 
   '@es-joy/resolve.exports@1.2.0':
     resolution: {integrity: sha512-Q9hjxWI5xBM+qW2enxfe8wDKdFWMfd0Z29k5ZJnuBqD/CasY5Zryj09aCA6owbGATWz+39p5uIdaHXpopOcG8g==}
@@ -1875,9 +1875,9 @@ packages:
     resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
     engines: {node: '>=12'}
 
-  are-docs-informative@0.0.2:
-    resolution: {integrity: sha512-ixiS0nLNNG5jNQzgZJNoUpBKdo9yTYZMGJ+QgT2jmjR7G7+QHRCc4v6LQ3NgE7EBJq+o0ams3waJwkrlBom8Ig==}
-    engines: {node: '>=14'}
+  are-docs-informative@0.1.1:
+    resolution: {integrity: sha512-sqRsNQBwbKLRX0jV5Cu5uzmtflf892n4Vukz7T659ebL4pz3mpOqCMU7lxMoBTFwnp10E3YB5ZcyHM41W5bcDA==}
+    engines: {node: '>=18'}
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
@@ -2008,10 +2008,6 @@ packages:
   comment-json@5.0.0:
     resolution: {integrity: sha512-uiqLcOiVDJtBP8WGkZHEP+FZIhTzP1dxvn59EfoYUi9gqupjrBWVQkO2atDrbnKPwLeotFYDsuNb26uBMqB+hw==}
     engines: {node: '>= 6'}
-
-  comment-parser@1.4.6:
-    resolution: {integrity: sha512-ObxuY6vnbWTN6Od72xfwN9DbzC7Y2vv8u1Soi9ahRKL37gb6y1qk6/dgjs+3JWuXJHWvsg3BXIwzd/rkmAwavg==}
-    engines: {node: '>= 12.0.0'}
 
   comment-parser@1.4.8:
     resolution: {integrity: sha512-rKZTGo4fzKYna8UcL0isTg5wkBNla7bxTypLwZQXjIdi++IdP1OJ41rI5Mti3/jltkPujbu4i9LIARYA+zpotQ==}
@@ -2273,9 +2269,9 @@ packages:
       eslint-import-resolver-node:
         optional: true
 
-  eslint-plugin-jsdoc@63.0.0:
-    resolution: {integrity: sha512-eDHuVGyZydr4BKgjXouU7bsn5qaqUlObXBSWRJk3vXcQgXVFnrwWIqpP7uBhRX9NQpk6NIIFyRc6F6omZNi/8g==}
-    engines: {node: ^22.13.0 || >=24}
+  eslint-plugin-jsdoc@64.3.1:
+    resolution: {integrity: sha512-iBAAssLx5P8RlfQTzY8+1o5O2/JCoFdT8Mpzl+38OmRen5s1SPmPvmpBwAb3Er21cQ8J39EgfFYpUdrvVfH8bg==}
+    engines: {node: ^22.22.2 || >=24.15.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
 
@@ -2712,13 +2708,13 @@ packages:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
-  jsdoc-type-pratt-parser@7.2.0:
-    resolution: {integrity: sha512-dh140MMgjyg3JhJZY/+iEzW+NO5xR2gpbDFKHqotCmexElVntw7GjWjt511+C/Ef02RU5TKYrJo/Xlzk+OLaTw==}
-    engines: {node: '>=20.0.0'}
-
   jsdoc-type-pratt-parser@7.3.0:
     resolution: {integrity: sha512-DoyJXo7x/n48M3NsGOs9QnEws0ft0tV3YsSgvWMNxz2hZtz+Q6fpqUD96lVYX4a+jcEkzHeFNDJOn68TzXfbdA==}
     engines: {node: '>=20.0.0'}
+
+  jsdoc-type-pratt-parser@9.1.2:
+    resolution: {integrity: sha512-9EXymowgk1mb9RY1VxuwKc+AhaxfBk2CV0dWxgGM+l5RURTtiUoAx7MlKwcsiVcEXK5HEPa7FeH/tsRpqjEPRg==}
+    engines: {node: ^22.22.2 || >=24.15.0}
 
   jsesc@3.1.0:
     resolution: {integrity: sha512-/sM3dO2FOzXjKQhJuo0Q173wf2KOo8t4I8vHy6lF9poUp7bKT0/NHE8fPX23PwfhnykfqnC2xRxOnVw5XuGIaA==}
@@ -3417,8 +3413,8 @@ packages:
   spdx-exceptions@2.5.0:
     resolution: {integrity: sha512-PiU42r+xO4UbUS1buo3LPJkjlO7430Xn5SVAhdpzzsPHsjbYVflnnFdATgabnLude+Cqu25p6N+g2lw/PFsa4w==}
 
-  spdx-expression-parse@4.0.0:
-    resolution: {integrity: sha512-Clya5JIij/7C6bRR22+tnGXbc4VKlibKSVj2iHvVeX5iMW7s1SIQlqu699JkODJJIhh/pUu8L0/VLh8xflD+LQ==}
+  spdx-expression-parse@5.0.0:
+    resolution: {integrity: sha512-vngmw3Rgn+o2arXNbnZaj5UtOEBuWBfvaI+Wc8GFfykIhA5/vdK9/Sp/XkLv63dykz2rxKDvKEHupF5P0FORcQ==}
 
   spdx-license-ids@3.0.23:
     resolution: {integrity: sha512-CWLcCCH7VLu13TgOH+r8p1O/Znwhqv/dbb6lqWy67G+pT1kHmeD/+V36AVb/vq8QMIQwVShJ6Ssl5FPh0fuSdw==}
@@ -4077,13 +4073,13 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@es-joy/jsdoccomment@0.86.0':
+  '@es-joy/jsdoccomment@0.95.1':
     dependencies:
       '@types/estree': 1.0.9
       '@typescript-eslint/types': 8.69.0
-      comment-parser: 1.4.6
+      comment-parser: 1.4.8
       esquery: 1.7.0
-      jsdoc-type-pratt-parser: 7.2.0
+      jsdoc-type-pratt-parser: 9.1.2
 
   '@es-joy/resolve.exports@1.2.0': {}
 
@@ -4408,7 +4404,7 @@ snapshots:
 
   '@pkgr/core@0.3.6': {}
 
-  '@rebeccastevens/eslint-config@3.9.7(0ecc1dc1f8e07e3bd7765abaa1059904)':
+  '@rebeccastevens/eslint-config@3.9.7(998f4555390ce7b64918777b4cf22f99)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 1.7.0
@@ -4431,7 +4427,7 @@ snapshots:
       eslint-plugin-format: 2.0.1(eslint@10.9.1(jiti@2.6.1))
       eslint-plugin-functional: 10.0.0(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.2)
       eslint-plugin-import-x: 4.16.2(@typescript-eslint/utils@8.69.0(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.2))(eslint@10.9.1(jiti@2.6.1))
-      eslint-plugin-jsdoc: 63.0.0(eslint@10.9.1(jiti@2.6.1))
+      eslint-plugin-jsdoc: 64.3.1(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.2)
       eslint-plugin-jsonc: 3.1.2(eslint@10.9.1(jiti@2.6.1))
       eslint-plugin-n: 18.0.1(eslint@10.9.1(jiti@2.6.1))(ts-declaration-location@1.0.7(typescript@6.0.2))(typescript@6.0.2)
       eslint-plugin-no-only-tests: 3.3.0
@@ -5084,7 +5080,7 @@ snapshots:
 
   ansi-styles@6.2.3: {}
 
-  are-docs-informative@0.0.2: {}
+  are-docs-informative@0.1.1: {}
 
   argparse@2.0.1: {}
 
@@ -5187,8 +5183,6 @@ snapshots:
     dependencies:
       array-timsort: 1.0.3
       esprima: 4.0.1
-
-  comment-parser@1.4.6: {}
 
   comment-parser@1.4.8: {}
 
@@ -5467,14 +5461,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-jsdoc@63.0.0(eslint@10.9.1(jiti@2.6.1)):
+  eslint-plugin-jsdoc@64.3.1(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.2):
     dependencies:
-      '@es-joy/jsdoccomment': 0.86.0
+      '@es-joy/jsdoccomment': 0.95.1
       '@es-joy/resolve.exports': 1.2.0
-      are-docs-informative: 0.0.2
-      comment-parser: 1.4.6
+      '@typescript-eslint/utils': 8.69.0(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.2)
+      are-docs-informative: 0.1.1
+      comment-parser: 1.4.8
       debug: 4.4.3
-      escape-string-regexp: 4.0.0
+      escape-string-regexp: 5.0.0
       eslint: 10.9.1(jiti@2.6.1)
       espree: 11.2.0
       esquery: 1.7.0
@@ -5482,10 +5477,11 @@ snapshots:
       object-deep-merge: 2.0.1
       parse-imports-exports: 0.2.4
       semver: 7.8.5
-      spdx-expression-parse: 4.0.0
+      spdx-expression-parse: 5.0.0
       to-valid-identifier: 1.0.0
     transitivePeerDependencies:
       - supports-color
+      - typescript
 
   eslint-plugin-jsonc@3.1.2(eslint@10.9.1(jiti@2.6.1)):
     dependencies:
@@ -5930,9 +5926,11 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdoc-type-pratt-parser@7.2.0: {}
-
   jsdoc-type-pratt-parser@7.3.0: {}
+
+  jsdoc-type-pratt-parser@9.1.2:
+    dependencies:
+      '@types/estree': 1.0.9
 
   jsesc@3.1.0: {}
 
@@ -6888,7 +6886,7 @@ snapshots:
 
   spdx-exceptions@2.5.0: {}
 
-  spdx-expression-parse@4.0.0:
+  spdx-expression-parse@5.0.0:
     dependencies:
       spdx-exceptions: 2.5.0
       spdx-license-ids: 3.0.23
