@@ -18,8 +18,8 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       '@rebeccastevens/eslint-config':
-        specifier: 3.9.7
-        version: 3.9.7(998f4555390ce7b64918777b4cf22f99)
+        specifier: 4.0.3
+        version: 4.0.3(998f4555390ce7b64918777b4cf22f99)
       '@stylistic/eslint-plugin':
         specifier: 5.10.0
         version: 5.10.0(eslint@10.9.1(jiti@2.6.1))
@@ -255,8 +255,8 @@ importers:
 
 packages:
 
-  '@antfu/install-pkg@1.1.0':
-    resolution: {integrity: sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==}
+  '@antfu/install-pkg@2.0.1':
+    resolution: {integrity: sha512-iCKVQcIC0e3oDxEfs3SHQGW+ovhBMZmS1TE+bTk50rVyMCBmCfClv7Qi3HQKlumYwvjb/iIMeWCW2i67q6kFfQ==}
 
   '@babel/helper-string-parser@7.29.7':
     resolution: {integrity: sha512-Pb5ijPrZ89GDH8223L4UP8i6QApWxs04RbPQJTeWDV0/keR2E36MeKnyr6LYmUUvqRRI+Iv87SuF1W6ErINzYw==}
@@ -1037,13 +1037,14 @@ packages:
     resolution: {integrity: sha512-SEeaJLb3qBNF/OaXnaR1NmmBbFYk1zC0ZH/52fATcRPLFg/p791YrcyFFy44Bo9sLaGuSuLp5Q6axbb/O+v/RA==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  '@rebeccastevens/eslint-config@3.9.7':
-    resolution: {integrity: sha512-+PzrXQAvqrHGXRXdxy5WEmg4SDACtbZzXLjkcNWc5wU5D7B4dZ/K5SXFKvr3iEPGVmtQnMTcxKniXgEANBY1rg==}
-    engines: {node: '>=20.0.0'}
+  '@rebeccastevens/eslint-config@4.0.3':
+    resolution: {integrity: sha512-D3fU4zPAXM9Cdg69HVJqQrzDcufEjPdxQ1l69uB0GSaAjgdZ5mSWtgNgmFn1VE3ENTlu25C7OuCC6Uh7RPRIQA==}
+    engines: {node: '>=24.0.0'}
     peerDependencies:
       '@eslint-community/eslint-plugin-eslint-comments': '*'
       '@eslint-react/eslint-plugin': '*'
       '@eslint/markdown': '*'
+      '@intlify/eslint-plugin-vue-i18n': '*'
       '@stylistic/eslint-plugin': '*'
       '@typescript-eslint/eslint-plugin': '*'
       '@typescript-eslint/parser': '*'
@@ -1057,6 +1058,8 @@ packages:
       eslint-import-resolver-typescript: '*'
       eslint-merge-processors: '*'
       eslint-plugin-better-tailwindcss: '*'
+      eslint-plugin-command: '*'
+      eslint-plugin-erasable-syntax-only: '*'
       eslint-plugin-format: '*'
       eslint-plugin-functional: '*'
       eslint-plugin-i18next: '*'
@@ -1067,14 +1070,18 @@ packages:
       eslint-plugin-n: '*'
       eslint-plugin-no-only-tests: '*'
       eslint-plugin-optimize-regex: '*'
+      eslint-plugin-perfectionist: '*'
+      eslint-plugin-pnpm: '*'
       eslint-plugin-prettier: '*'
       eslint-plugin-promise: '*'
       eslint-plugin-react-hooks: '*'
       eslint-plugin-react-refresh: '*'
       eslint-plugin-regexp: '*'
+      eslint-plugin-security: '*'
       eslint-plugin-sonarjs: '*'
       eslint-plugin-toml: '*'
       eslint-plugin-unicorn: '*'
+      eslint-plugin-unused-imports: '*'
       eslint-plugin-vue: '*'
       eslint-plugin-yml: '*'
       eslint-processor-vue-blocks: '*'
@@ -1090,6 +1097,8 @@ packages:
       '@eslint-react/eslint-plugin':
         optional: true
       '@eslint/markdown':
+        optional: true
+      '@intlify/eslint-plugin-vue-i18n':
         optional: true
       '@stylistic/eslint-plugin':
         optional: true
@@ -1115,6 +1124,10 @@ packages:
         optional: true
       eslint-plugin-better-tailwindcss:
         optional: true
+      eslint-plugin-command:
+        optional: true
+      eslint-plugin-erasable-syntax-only:
+        optional: true
       eslint-plugin-format:
         optional: true
       eslint-plugin-functional:
@@ -1135,6 +1148,10 @@ packages:
         optional: true
       eslint-plugin-optimize-regex:
         optional: true
+      eslint-plugin-perfectionist:
+        optional: true
+      eslint-plugin-pnpm:
+        optional: true
       eslint-plugin-prettier:
         optional: true
       eslint-plugin-promise:
@@ -1145,11 +1162,15 @@ packages:
         optional: true
       eslint-plugin-regexp:
         optional: true
+      eslint-plugin-security:
+        optional: true
       eslint-plugin-sonarjs:
         optional: true
       eslint-plugin-toml:
         optional: true
       eslint-plugin-unicorn:
+        optional: true
+      eslint-plugin-unused-imports:
         optional: true
       eslint-plugin-vue:
         optional: true
@@ -3781,7 +3802,7 @@ packages:
 
 snapshots:
 
-  '@antfu/install-pkg@1.1.0':
+  '@antfu/install-pkg@2.0.1':
     dependencies:
       package-manager-detector: 1.8.0
       tinyexec: 1.3.0
@@ -4404,9 +4425,9 @@ snapshots:
 
   '@pkgr/core@0.3.6': {}
 
-  '@rebeccastevens/eslint-config@3.9.7(998f4555390ce7b64918777b4cf22f99)':
+  '@rebeccastevens/eslint-config@4.0.3(998f4555390ce7b64918777b4cf22f99)':
     dependencies:
-      '@antfu/install-pkg': 1.1.0
+      '@antfu/install-pkg': 2.0.1
       '@clack/prompts': 1.7.0
       eslint: 10.9.1(jiti@2.6.1)
       globals: 17.11.0
